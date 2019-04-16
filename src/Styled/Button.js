@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import theme from '../theme';
 
 const Button = styled.button`
-  box-sizing: border-box;
   position: relative;
   display: block;
   display: flex;
@@ -34,7 +33,6 @@ const Button = styled.button`
 `;
 
 const buttonLink = styled(Link)`
-  box-sizing: border-box;
   position: relative;
   display: flex;
   justify-content: center;

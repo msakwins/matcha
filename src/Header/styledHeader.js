@@ -2,7 +2,7 @@ import theme from '../theme.js';
 import styled from 'styled-components';
 
 export default (Component) => styled(Component)`
-  height: 90px;
+  height: 60px;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -12,6 +12,7 @@ export default (Component) => styled(Component)`
   color: white;
   font-size: 24px;
   font-weight: 600;
+  font-family: ${theme.font.secondary};
 
   .logo {
     display: flex;

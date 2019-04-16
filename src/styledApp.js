@@ -4,10 +4,10 @@ import theme from './theme';
 export default (Component) => styled(Component)`
   height: 100%;
   text-align: center;
-  font-family: ${theme.font.secondary};
+  font-family: ${theme.font.primary};
   color: #333;
   cursor: default;
-  box-sizing: border-box;
+  background: ${theme.colors.darkBlue};
 
 .App-logo {
 }

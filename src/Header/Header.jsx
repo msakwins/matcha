@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import styledHeader from'./styledHeader';
 import { Link } from 'react-router-dom';
 
@@ -6,24 +6,13 @@ class Header extends React.Component {
   render() {
     const {
       className,
-      logged,
     } = this.props;
 
     return (
-      <div className={className} logged={logged}>
+      <div className={className}>
         <Link to="/" className="logo">
           M33t
         </Link>
-      { logged &&
-      <Fragment>
-        <Link to="/profile" className={`homepage-bubble ${this.props.pathname === '/profile' ? 'selected' : ''}`}>
-          <div></div>        
-        </Link>
-        <Link to='/settings' className="homepage-bubble settings">
-          <div></div>
-        </Link>
-      </Fragment>
-      }
       </div>
     );
   }
