@@ -8,8 +8,8 @@ export default (Component) => styled(Component)`
   margin: 40px auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  height: 90vh;
 
   h1 {
     font-size: 18px;

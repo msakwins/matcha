@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header/Header';
+import Footer from './Footer/Footer';
 import HomePage from './HomePage/HomePage';
 import SignUp from './SignUp/SignUp';
 import styled from './styledApp';
@@ -15,9 +16,10 @@ class App extends React.Component {
     return (
       <Router>
         <div className={className}>
-        <Header logged={logged} />
-        <Route exact path="/" component={HomePage} />
-        <Route path="/register" component={SignUp} />
+          <Header logged={logged} />
+          <Route exact path="/" component={HomePage} />
+          <Route path="/register" component={SignUp} />
+          <Footer />
         </div>
       </Router>
     );

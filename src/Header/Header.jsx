@@ -12,10 +12,8 @@ class Header extends React.Component {
     return (
       <div className={className} logged={logged}>
         <Link to="/" className="logo">
-        </Link>
-        <div className="logo">
           M33t
-        </div>
+        </Link>
       { logged &&
       <Fragment>
         <Link to="/profile" className={`homepage-bubble ${this.props.pathname === '/profile' ? 'selected' : ''}`}>

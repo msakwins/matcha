@@ -1,6 +1,6 @@
 import React from 'react';
 import styledSignUp from'./styledSignUp';
-import { Input, Button, Link } from '../Styled';
+import { Input, Button } from '../Styled';
 
 class SignUp extends React.Component {
   render() {
@@ -10,14 +10,9 @@ class SignUp extends React.Component {
 
     return (
       <div className={className}>
-        <label>First Name</label>
-        <Input type="text"/>
-        <label>Last Name</label>
-        <Input type="text"/>
-        <label>E-mail</label>
-        <Input type="text"/>
-        <label>Age</label>
-        <Input type="text"/>
+        <Input placeholder="First Name" type="text"/>
+        <Input placeholder="Last Name" type="text"/>
+        <Input placeholder="E-mail" type="text"/>
         <Button>Next</Button>
       </div>
     );
