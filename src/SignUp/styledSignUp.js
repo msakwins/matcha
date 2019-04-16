@@ -7,7 +7,7 @@ export default (Component) => styled(Component)`
   align-items: center;
   flex-direction: column;
   padding: 40px 0;
-  height: 90vh;
+  height: 80vh;
   background: ${theme.colors.darkBlue};
   color: ${theme.colors.white};
 `;

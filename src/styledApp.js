@@ -6,6 +6,8 @@ export default (Component) => styled(Component)`
   text-align: center;
   font-family: ${theme.font.secondary};
   color: #333;
+  cursor: default;
+  box-sizing: border-box;
 
 .App-logo {
 }

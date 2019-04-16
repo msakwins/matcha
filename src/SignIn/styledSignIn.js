@@ -9,10 +9,21 @@ export default (Component) => styled(Component)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 90vh;
+  height: 80vh;
 
   h1 {
     font-size: 18px;
+  }
+
+  .signin__forgot-password {
+    font-family: ${theme.font.primary};
+    font-size: 14px;
+  }
+
+  .signin__signup {
+    font-family: ${theme.font.primary};
+    font-size: 14px;
+    margin: 20px 0;
   }
 
   .homepage__link {

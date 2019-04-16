@@ -1,6 +1,6 @@
 import React from 'react';
 import styledSignIn from './styledSignIn';
-import { Input, Button, Link } from '../Styled';
+import { Input, Button, Link, BLink } from '../Styled';
 
 class SignIn extends React.Component {
   render() {
@@ -8,6 +8,11 @@ class SignIn extends React.Component {
       className,
     } = this.props;
 
+    logging() {
+      this.setState({
+        logged: true,
+      });
+    }
     return (
       <div className={className}>
         <h1>sign in</h1>
@@ -16,16 +21,14 @@ class SignIn extends React.Component {
           placeholder="Password"
           type="text"
         />
-        <Button>login</Button>
-        <div className="homepage__link">
-          <div className="homepage__forgot-password">
-            <span>Forgot your password? </span>
-            <Link to="/recover">reset my password</Link>
-          </div>
-          <div className="homepage__register-account">
-            <span>You don't have an account yet? </span>
-            <Link to="/register">register</Link>
-          </div>
+        <div className="signin__forgot-password">
+          <span>Forgot your password? </span>
+          <Link to="/recover">reset my password</Link>
+        </div>
+        <Button onClick={() => logging()}>Login</Button>
+        <div className="signin__signup">
+          <span>You don't have an account yet? </span>
+          <BLink to="/register">Register</BLink>
         </div>
       </div>
     );

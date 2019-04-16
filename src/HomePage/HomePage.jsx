@@ -17,7 +17,7 @@ class HomePage extends React.Component {
       </div>
       }
       { !logged &&
-        <SignIn />
+        <SignIn logged={logged} />
       }
       </div>
     );

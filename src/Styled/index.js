@@ -1,5 +1,5 @@
 import Input from './Input';
-import Button from './Button';
+import { Button, buttonLink } from './Button';
 import styledLink from './Link'
 
-export { Input, Button, styledLink as Link};
+export { Input, Button, styledLink as Link, buttonLink as BLink};
