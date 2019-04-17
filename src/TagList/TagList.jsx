@@ -6,6 +6,8 @@ import StyledTagList from'./styledTagList';
 const TagList = () =>
   <StyledTagList>
     <TagItem />
+    <TagItem />
+    <TagItem />
   </StyledTagList>
 
 export default TagList;

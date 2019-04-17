@@ -20,6 +20,7 @@ export default (Component) => styled(Component)`
 
   ${({ extended, open }) => extended &&`
     height: 100%;
+    margin: 0 10px 10px;
   `}
 
   .contact-item__message-list {

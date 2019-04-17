@@ -2,7 +2,7 @@ import theme from '../theme.js';
 import styled from 'styled-components';
 
 
-const StyledProfile = styled.div`
+const MyProfileWrapper = styled.div`
     display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,4 +43,4 @@ const StyledProfile = styled.div`
   }
 `;
 
-export default StyledProfile
+export default MyProfileWrapper;

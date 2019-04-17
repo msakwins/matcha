@@ -8,6 +8,7 @@ import Menu from './Menu/Menu';
 import MessageList from './MessageList/MessageList';
 import Profile from './Profile/Profile';
 import SignIn from './SignIn/SignIn';
+import MyProfile from './MyProfile/MyProfile';
 import styled from './styledApp';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
@@ -28,6 +29,7 @@ function App(props) {
             <Route exact path="/" component={HomePage} />
             <Route path="/profile" component={Profile} />
             <Route path="/messageid" component={MessageList} />
+            <Route path="/my-profile" component={MyProfile} />
           <Menu />
           </>
           :
