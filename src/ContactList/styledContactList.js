@@ -3,14 +3,14 @@ import styled from 'styled-components';
 
 export default (Component) => styled(Component)`
   width: 100%;
-  height: 80vh;
+  height: 450px; /* WHY */
   background: ${theme.colors.darkBlue};
   color: ${theme.colors.white};
   display: flex;
   flex-direction: column;
+  transition: height 0.4s;
 
   .contact-list__item {
-    max-width: 300px;
     margin: 5px 10px;
     padding: 10px 10px;
     font-size: 12px;
@@ -21,12 +21,12 @@ export default (Component) => styled(Component)`
     flex-direction: column;
     transition: height 0.5s;
     position: relative;
+
+    @media all and (min-width: 768px) {
+      max-width: 300px;
+    }
   }
   
-  .open {
-    height: 240px;
-  }
-
   a {
     display: flex;
     align-items: center;
@@ -36,11 +36,14 @@ export default (Component) => styled(Component)`
     height: 30px;
     width: 30px;
     margin: 0 10px 0 0;
+    border-radius: 100%;
   }
 
   .contact-list__user-name {
     margin: 0 10px 0 0;
     font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.05rem;
     color: ${theme.colors.darkBlue};
   }
   
@@ -65,9 +68,47 @@ export default (Component) => styled(Component)`
     width: 18px;
     padding: 0;
     margin: 0;
-    background: none;
-    background-image: url('down-arrow.svg');
-    background-repeat: no-repeat;
     border: none;
   }
+  
+  .contact-list__open-button {
+    position: absolute;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    margin-left: 1px;
+    background: none;
+
+    &:before,
+    &:after{
+        content: "";
+        position: absolute;
+        background-color: ${theme.colors.mediumBlue};
+        transition: transform 0.25s ease-out;
+    }
+
+    /* Vertical line */
+    &:before{
+        top: 0;
+        left: 11px;
+        width: 2px;
+        height: 20px;
+        margin-left: -2px;
+    }
+
+    /* horizontal line */
+    &:after {
+        top: 11px;
+        left: 0;
+        width: 20px;
+        height: 2px;
+        margin-top: -2px;
+    }
+    
+  }
+
+    .minus {
+      :before { transform: rotate(90deg); }
+      :after { transform: rotate(180deg); }
+    }
 `;

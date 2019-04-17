@@ -13,7 +13,7 @@ export default (Component) => styled(Component)`
   background: ${theme.colors.darkBlue};
 
   h1 {
-    font-size: 18px;
+    color: ${theme.colors.white};
   }
 
   .signin__forgot-password {

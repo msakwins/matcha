@@ -2,12 +2,11 @@ import styled from 'styled-components';
 import theme from './theme';
 
 export default (Component) => styled(Component)`
-  height: 100%;
+  height: 100vh;
   text-align: center;
   font-family: ${theme.font.primary};
   color: #333;
   cursor: default;
-  background: ${theme.colors.darkBlue};
 
 .App-logo {
 }

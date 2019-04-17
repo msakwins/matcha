@@ -2,15 +2,34 @@ import theme from '../theme.js';
 import styled from 'styled-components';
 
 export default (Component) => styled(Component)`
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: 50px;
+  overflow: hidden;
+  padding: 10px;
   background: ${theme.colors.white};
   color: ${theme.colors.white};
   display: flex;
   flex-direction: column;
   position: relative;
+  transition: height 0.4s;
+  margin: 10px;
+
+  ${({ open }) => open && `
+    height: 240px;
+  `}
+
+  ${({ extended, open }) => extended &&`
+    height: 100%;
+  `}
 
   .contact-item__message-list {
+    height: 100%;
+    position: relative;
+
+    ${({ open }) => open && `
+      animation: open 0.4s ease-out
+    `};
+
   }
 
   .contact-item__send-block {
@@ -18,10 +37,15 @@ export default (Component) => styled(Component)`
     position: absolute;
     bottom: 0;
     height: 40px;
-    display: flex;
+    display: none;
     flex-direction: row;
     align-items: center;
-    animation: open 0.4s;
+    animation: open 0.6s;
+
+    ${({ extended, open }) => (extended || open) && `
+      display: flex;
+    `}
+
   }
 
   input {
@@ -53,6 +77,7 @@ export default (Component) => styled(Component)`
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }

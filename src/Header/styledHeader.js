@@ -21,5 +21,6 @@ export default (Component) => styled(Component)`
     align-items: center;
     text-decoration: none;
     color: ${theme.colors.white};
+    text-shadow: 2px 2px ${theme.colors.lightBlue};
   }
 `;

@@ -5,7 +5,7 @@ import { Input, Button, Link, BLink } from '../Styled';
 function SignIn(props) {
   return (
     <div className={props.className}>
-      <h1>sign in</h1>
+      <h1>Sign in</h1>
       <Input placeholder="Login" type="text"/>
       <Input
         placeholder="Password"
