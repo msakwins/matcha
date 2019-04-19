@@ -1,4 +1,4 @@
-import theme from '../theme.js';
+import { theme } from '../theme.js';
 import styled from 'styled-components';
 
 export default (Component) => styled(Component)`
@@ -9,6 +9,8 @@ export default (Component) => styled(Component)`
   display: flex;
   flex-direction: column;
   transition: height 0.4s;
+  position: relative;
+  top: 60px;
 
   .contact-list__item {
     margin: 5px 10px;
@@ -16,7 +18,7 @@ export default (Component) => styled(Component)`
     font-size: 12px;
     height: 50px;
     background: ${theme.colors.white};
-    color: ${theme.colors.mediumBlue};
+    color: ${theme.colors.darkBlue};
     display: flex;
     flex-direction: column;
     transition: height 0.5s;
@@ -83,7 +85,7 @@ export default (Component) => styled(Component)`
     &:after{
         content: "";
         position: absolute;
-        background-color: ${theme.colors.mediumBlue};
+        background-color: ${theme.colors.darkBlue};
         transition: transform 0.25s ease-out;
     }
 

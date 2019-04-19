@@ -1,4 +1,4 @@
-import theme from '../theme.js';
+import { theme } from '../theme.js';
 import styled from 'styled-components';
 
 export default (Component) => styled(Component)`
@@ -7,7 +7,6 @@ export default (Component) => styled(Component)`
   height: auto;
   padding: 10px 20px;
   background: ${theme.colors.lightestBlue};
-  color: ${theme.colors.white};
   display: flex;
   border-radius: 20px;
   flex-direction: column;
@@ -15,7 +14,7 @@ export default (Component) => styled(Component)`
   letter-spacing: 0.03rem;
   font-weight: bold;
   text-align: left;
-  color: ${theme.colors.mediumBlue};
+  color: ${theme.colors.darkBlue};
   margin: 10px 0 0;
 
   ${({ mine }) => mine && `

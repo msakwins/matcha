@@ -5,32 +5,52 @@ import MyProfileWrapper from'./MyProfileWrapper';
 
 function MyProfile(props) {
   const [openPhoto, setOpenPhoto] = useState(false);
-  const [like, setLike] = useState(0);
 
   function handleOpenPhoto() {
       return setOpenPhoto(!openPhoto);
   }
 
-  function handleLike() {
-    if (like === 0)
-      return setLike(1);
-    else if (like === 1)
-      return setLike(2);
-    else if (like === 2)
-      return setLike(0);
-}
-
   return (
-    <MyProfileWrapper like={like} photo={openPhoto}>
+    <MyProfileWrapper photo={openPhoto}>
       <img
         className="profile__user-photo"
         alt="user"
         src="user.png"
         onClick={handleOpenPhoto}
       />
-      <span className="profile__user-name">Nioki</span>
-      <button className="profile__fav" onClick={handleLike} like={props.like}/>
+      <div className="profile__info">
+        <span className="profile__name">Nioki</span>
+        <span className="profile__age">24</span>
+        <span className="profile__activity">Freelance cat</span>
+      </div>
       <TagList />
+      <div className="profile__about">
+        <h2>About me</h2>
+        <p>
+          <span className="profile__about-cat">First Name: </span>
+          <span className="profile__about-text">Nioki</span>
+        </p>
+        <p>
+          <span className="profile__about-cat">Last Name: </span>
+          <span className="profile__about-text">Bouss</span>
+        </p>
+        <p>
+          <span className="profile__about-cat">e-mail: </span>
+          <span className="profile__about-text">nioki@mail.com</span>
+        </p>
+        <p>
+          <span className="profile__about-cat">City: </span>
+          <span className="profile__about-text">San Francisco</span>
+        </p>
+        <p>
+          <span className="profile__about-cat">City: </span>
+          <span className="profile__about-text">San Francisco</span>
+        </p>
+        <p>
+          <span className="profile__about-cat">City: </span>
+          <span className="profile__about-text">San Francisco</span>
+        </p>
+      </div>
     </MyProfileWrapper>
   );
 }

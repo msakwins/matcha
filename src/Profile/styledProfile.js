@@ -1,13 +1,15 @@
-import theme from '../theme.js';
+import { theme } from '../theme.js';
 import styled from 'styled-components';
 
 
 const StyledProfile = styled.div`
-    display: flex;
+  display: flex;
+  margin: 70px 0 0 0;
   flex-direction: column;
   align-items: center;
-  background-color: ${theme.colors.lightestBlue};
+  background-color: ${theme.colors.white};
   padding: 10px;
+  height: 100%;
 
   img {
     width: 160px;
@@ -24,7 +26,7 @@ const StyledProfile = styled.div`
     margin: 10px 0;
     font-weight: bold;
     letter-spacing: 0.05rem;
-    color: ${theme.colors.mediumBlue};
+    color: ${theme.colors.darkBlue};
   }
 
   .profile__fav {

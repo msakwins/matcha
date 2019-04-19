@@ -1,30 +1,75 @@
-import theme from '../theme.js';
+import { theme } from '../theme.js';
 import styled from 'styled-components';
 
 
 const MyProfileWrapper = styled.div`
-    display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: ${theme.colors.lightestBlue};
+  background-color: ${theme.colors.white};
+  color: ${theme.colors.darkGrey};
   padding: 10px;
+  position: relative;
+  top: 60px;
+  overflow: scroll;
 
   img {
     width: 160px;
     border-radius: 100%;
-
+    
     ${({ photo }) => photo && `
       width: 100%;
       height: 100%;
       border-radius: 0;
-    `}
+      `}
+  }
+  
+  .profile__info {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+
+    .profile__name {
+      font-weight: bold;
+      letter-spacing: 0.05rem;
+      color: ${theme.colors.darkBlue};
+    }
+  
+    .profile__age {
+      font-size: 14px;
+      color: ${theme.colors.violet};
+      font-weight: bold;
+    }
+  
+    .profile__activity {
+      font-size: 14px;
+      color: ${theme.colors.darkBlue};
+      font-weight: bold;
+    }
   }
 
-  .profile__user-name {
+  .profile__about {
+    text-align: left;
+    padding: 10px;
     margin: 10px 0;
-    font-weight: bold;
-    letter-spacing: 0.05rem;
-    color: ${theme.colors.mediumBlue};
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    
+    h2 {
+      text-decoration: underline;
+      font-size: 16px;
+      margin: 0 0 5px;
+    }
+  }
+
+  p {
+    margin: 0 0 4px;
+
+    .profile__about-cat {
+      font-weight: bold;
+    }
   }
 
   .profile__fav {

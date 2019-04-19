@@ -1,13 +1,14 @@
 import React from 'react';
 import TagItem from '../TagItem/TagItem';
-import StyledTagList from'./styledTagList';
+import TagListWrapper from'./TagListWrapper';
 
 
 const TagList = () =>
-  <StyledTagList>
+  <TagListWrapper>
     <TagItem />
     <TagItem />
     <TagItem />
-  </StyledTagList>
+    <span>Ajouter des intérêts</span>
+  </TagListWrapper>
 
 export default TagList;

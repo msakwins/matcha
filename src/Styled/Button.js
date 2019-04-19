@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import theme from '../theme';
+import { theme } from '../theme';
 
 const Button = styled.button`
   position: relative;
@@ -27,7 +27,7 @@ const Button = styled.button`
   
   :hover {
     box-shadow: inset 200px 0 0 0 ${theme.colors.lightBlue};
-    color: ${theme.colors.mediumBlue};
+    color: ${theme.colors.darkBlue};
     border-color: ${theme.colors.lightBlue};
   }
 `;
@@ -57,7 +57,7 @@ const buttonLink = styled(Link)`
   
   :hover {
     box-shadow: inset 200px 0 0 0 ${theme.colors.lightBlue};
-    color: ${theme.colors.mediumBlue};
+    color: ${theme.colors.darkBlue};
     border-color: ${theme.colors.lightBlue};
   }
 `;

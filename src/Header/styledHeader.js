@@ -1,4 +1,4 @@
-import theme from '../theme.js';
+import { theme } from '../theme.js';
 import styled from 'styled-components';
 
 export default (Component) => styled(Component)`
@@ -8,11 +8,12 @@ export default (Component) => styled(Component)`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background: ${theme.colors.darkBlue};
-  color: white;
+  background: ${props => props.theme.bgSecondary};
   font-size: 24px;
   font-weight: 600;
-  font-family: ${theme.font.secondary};
+  font-family: ${theme.font.logo};
+  position: absolute;
+  top: 0;
 
   .logo {
     display: flex;
@@ -20,7 +21,7 @@ export default (Component) => styled(Component)`
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: ${theme.colors.white};
-    text-shadow: 2px 2px ${theme.colors.lightBlue};
+    color: ${props => props.theme.fontSecondary};
+    text-shadow: 2px 2px ${props => props.theme.fontTertiary};
   }
 `;

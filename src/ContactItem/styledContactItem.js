@@ -1,4 +1,4 @@
-import theme from '../theme.js';
+import { theme } from '../theme.js';
 import styled from 'styled-components';
 
 export default (Component) => styled(Component)`
@@ -7,7 +7,6 @@ export default (Component) => styled(Component)`
   overflow: hidden;
   padding: 10px;
   background: ${theme.colors.white};
-  color: ${theme.colors.white};
   display: flex;
   flex-direction: column;
   position: relative;

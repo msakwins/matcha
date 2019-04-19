@@ -1,13 +1,12 @@
-import theme from '../theme.js';
 import styled from 'styled-components';
 
 export default (Component) => styled(Component)`
   width: 100%;
   max-width: 1024px;
   padding: 0 20px;
-  margin: auto;
-  color: ${theme.colors.white};
-  background: ${theme.colors.darkBlue};
+  margin: 70px auto 0;
+  color: ${props => props.theme.fontPrimary};
+  background: ${props => props.theme.bgPrimary};
   overflow: auto;
   position: relative;
 
