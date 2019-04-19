@@ -3,7 +3,8 @@ import { theme } from '../theme';
 
 const SettingsWrapper = styled.div`
   display: flex;
-  margin: 70px 0 0 0;
+  margin: 60px auto;
+  padding: 10px;
 
   .settings__theme-1 {
     height: 30px;

@@ -8,7 +8,6 @@ export default (Component) => styled(Component)`
   margin: 10px 0;
   flex-direction: column;
   max-height: 130px;
-  overflow: scroll;
 
   ${({ extended }) => extended && `
     max-height: unset;

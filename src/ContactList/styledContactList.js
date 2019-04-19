@@ -9,8 +9,7 @@ export default (Component) => styled(Component)`
   display: flex;
   flex-direction: column;
   transition: height 0.4s;
-  position: relative;
-  top: 60px;
+  margin: 60px auto;
 
   .contact-list__item {
     margin: 5px 10px;

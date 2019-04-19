@@ -4,11 +4,11 @@ import styled from 'styled-components';
 
 const StyledProfile = styled.div`
   display: flex;
-  margin: 70px 0 0 0;
+  margin: 60px auto;
+  padding: 10px;
   flex-direction: column;
   align-items: center;
   background-color: ${theme.colors.white};
-  padding: 10px;
   height: 100%;
 
   img {

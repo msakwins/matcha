@@ -11,7 +11,6 @@ const MyProfileWrapper = styled.div`
   padding: 10px;
   position: relative;
   top: 60px;
-  overflow: scroll;
 
   img {
     width: 160px;

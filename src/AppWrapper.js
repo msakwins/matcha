@@ -5,7 +5,6 @@ const AppWrapper = styled.div`
   text-align: center;
   font-family: ${theme.font.primary};
   cursor: default;
-  overflow: scroll;
 
   .App-header {
     min-height: 100vh;
