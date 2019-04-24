@@ -52,7 +52,7 @@ const SignUp = () => {
         <Input dark placeholder="Interests" type="text"/>
       </div>
       <div className="sign-up__buttons">
-        <button className="sign-up__button" onClick={handleNextPage}>Skip</button>
+        <button className="sign-up__button">Skip</button>
         <Button light className="sign-up__button" onClick={handlePreviousPage}>Back</Button>
         <Button light className="sign-up__button" onClick={handleNextPage}>Next</Button>
       </div>
@@ -64,9 +64,9 @@ const SignUp = () => {
         <Input dark placeholder="Interests" type="text"/>
       </div>
       <div className="sign-up__buttons">
-        <button className="sign-up__button" onClick={handleNextPage}>Skip</button>
+        <button className="sign-up__button">Skip</button>
         <Button light className="sign-up__button" onClick={handlePreviousPage}>Back</Button>
-        <Button light className="sign-up__button" onClick={handleNextPage}>Create</Button>
+        <Button light className="sign-up__button">Create</Button>
       </div>
     </div>
   </SignUpWrapper>

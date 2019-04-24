@@ -8,9 +8,9 @@ const MyProfileWrapper = styled.div`
   align-items: center;
   background-color: ${theme.colors.white};
   color: ${theme.colors.darkGrey};
-  padding: 10px;
   position: relative;
   top: 60px;
+  padding: 10px 10px 0;
 
   
   img {
