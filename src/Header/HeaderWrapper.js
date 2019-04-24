@@ -1,7 +1,7 @@
-import { theme } from '../theme.js';
+import theme from '../theme.js';
 import styled from 'styled-components';
 
-export default (Component) => styled(Component)`
+const HeaderWrapper = styled.div`
   height: 60px;
   width: 100%;
   display: flex;
@@ -25,3 +25,5 @@ export default (Component) => styled(Component)`
     text-shadow: 2px 2px ${props => props.theme.fontTertiary};
   }
 `;
+
+export default HeaderWrapper;

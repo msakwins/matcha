@@ -1,15 +1,21 @@
-import { theme } from '../theme.js';
+import theme from '../theme.js';
 import styled from 'styled-components';
 
-export default (Component) => styled(Component)`
+const ContactListWrapper = styled.div`
   width: 100%;
-  height: 450px; /* WHY */
+  height: 100%; /* WHY */
   background: ${theme.colors.darkBlue};
   color: ${theme.colors.white};
   display: flex;
   flex-direction: column;
-  transition: height 0.4s;
-  margin: 60px auto;
+  margin: 60px auto 0;
+
+  .contact-list__title {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+  }
 
   .contact-list__item {
     margin: 5px 10px;
@@ -72,44 +78,8 @@ export default (Component) => styled(Component)`
     border: none;
   }
   
-  .contact-list__open-button {
-    position: absolute;
-    right: 0;
-    width: 20px;
-    height: 20px;
-    margin-left: 1px;
-    background: none;
 
-    &:before,
-    &:after{
-        content: "";
-        position: absolute;
-        background-color: ${theme.colors.darkBlue};
-        transition: transform 0.25s ease-out;
-    }
 
-    /* Vertical line */
-    &:before{
-        top: 0;
-        left: 11px;
-        width: 2px;
-        height: 20px;
-        margin-left: -2px;
-    }
-
-    /* horizontal line */
-    &:after {
-        top: 11px;
-        left: 0;
-        width: 20px;
-        height: 2px;
-        margin-top: -2px;
-    }
-    
-  }
-
-    .minus {
-      :before { transform: rotate(90deg); }
-      :after { transform: rotate(180deg); }
-    }
 `;
+
+export default ContactListWrapper;

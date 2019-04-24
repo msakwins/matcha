@@ -1,21 +1,12 @@
 import React from 'react';
-import styledFooter from'./styledFooter';
+import FooterWrapper from'./FooterWrapper';
 import { Link } from '../Styled';
 
-class Footer extends React.Component {
-  render() {
-    const {
-      className,
-    } = this.props;
+const Footer = () =>
+  <FooterWrapper>
+    <Link to="/CGV">
+      CGV
+    </Link>
+  </FooterWrapper>
 
-    return (
-      <div className={className}>
-        <Link to="/CGV">
-          CGV
-        </Link>
-      </div>
-    );
-  }
-}
-
-export default styledFooter(Footer);
+export default Footer;

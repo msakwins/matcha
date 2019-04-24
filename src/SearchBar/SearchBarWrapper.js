@@ -1,10 +1,9 @@
 import styled from 'styled-components';
-import { theme } from '../theme';
+import theme from '../theme';
 
 const SearchBarWrapper = styled.div`
   height: 40px;
   width: 100%;
-  position: absolute;
   top: 20px;
   background: ${theme.colors.white};
   animation: ${({ nonebar }) => nonebar && ''};

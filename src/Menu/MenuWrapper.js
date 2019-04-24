@@ -1,4 +1,4 @@
-import { theme } from '../theme.js';
+import theme from '../theme.js';
 import styled from 'styled-components';
 
 const MenuWrapper = styled.div`
@@ -13,6 +13,10 @@ const MenuWrapper = styled.div`
   border-top: 1px solid ${theme.colors.lightBlue};
   justify-content: space-between;
   align-items: center;
+
+  @media all and (min-width: 768px) {
+    top: 60px;
+  } 
 
   .menu__search-input {
     width: 0px;

@@ -1,7 +1,7 @@
-import { theme } from '../theme.js';
+import theme from '../theme.js';
 import styled from 'styled-components';
 
-export default (Component) => styled(Component)`
+const FooterWrapper = styled.div`
   height: 90px;
   width: 100%;
   padding: 20px;
@@ -14,3 +14,5 @@ export default (Component) => styled(Component)`
   position: absolute;
   bottom: 0;
 `;
+
+export default FooterWrapper;

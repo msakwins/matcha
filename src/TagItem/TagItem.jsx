@@ -1,10 +1,10 @@
 import React from 'react';
-import StyledTagItem from'./styledTagItem';
+import TagItemWrapper from'./TagItemWrapper';
 
 
 const TagItem = () =>
-  <StyledTagItem>
+  <TagItemWrapper>
     Innocent
-  </StyledTagItem>
+  </TagItemWrapper>
 
 export default TagItem;

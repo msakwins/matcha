@@ -1,12 +1,12 @@
 import React from 'react';
-import styledMessageItem from'./styledMessageItem';
+import MessageItemWrapper from'./MessageItemWrapper';
 
-function MessageItem(props) {
+function MessageItem({ mine }) {
   return (
-    <div className={props.className}>
-      Hello gsggzeg ezrzervh zrzrzer
-    </div>
+    <MessageItemWrapper mine={mine}>
+      Hello
+    </MessageItemWrapper>
   );
 }
 
-export default styledMessageItem(MessageItem);
+export default MessageItem;

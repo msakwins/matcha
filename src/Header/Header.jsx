@@ -1,21 +1,12 @@
 import React from 'react';
-import styledHeader from'./styledHeader';
+import HeaderWrapper from'./HeaderWrapper';
 import { Link } from 'react-router-dom';
 
-class Header extends React.Component {
-  render() {
-    const {
-      className,
-    } = this.props;
+const Header = () =>
+  <HeaderWrapper>
+    <Link to="/" className="logo">
+      M33t
+    </Link>
+  </HeaderWrapper>
 
-    return (
-      <div className={className}>
-        <Link to="/" className="logo">
-          M33t
-        </Link>
-      </div>
-    );
-  }
-}
-
-export default styledHeader(Header);
+export default Header;

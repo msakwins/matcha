@@ -1,11 +1,10 @@
 import React from 'react';
-import styledSignIn from './styledSignIn';
+import SignInWrapper from './SignInWrapper';
 import { Input, Button, Link, BLink } from '../Styled';
 
-function SignIn(props) {
+function SignIn({ handleLogging, isLogged }) {
   return (
-    <div className={props.className}>
-      <h1>Sign in</h1>
+    <SignInWrapper>
       <Input placeholder="Login" type="text"/>
       <Input
         placeholder="Password"
@@ -15,13 +14,13 @@ function SignIn(props) {
         <span>Forgot your password? </span>
         <Link to="/recover">reset my password</Link>
       </div>
-      <Button onClick={props.action}>Login</Button>
+      <Button onClick={handleLogging}>Login</Button>
       <div className="signin__signup">
         <span>You don't have an account yet? </span>
         <BLink to="/register">Register</BLink>
       </div>
-    </div>
+    </SignInWrapper>
   );
 }
 
-export default styledSignIn(SignIn);
+export default SignIn;

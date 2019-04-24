@@ -1,8 +1,8 @@
-import { theme } from '../theme.js';
+import theme from '../theme.js';
 import styled from 'styled-components';
 
 
-const StyledTagItem = styled.div`
+const TagItemWrapper = styled.div`
   display: flex;
   font-size: 12px;
   background: ${theme.colors.violet};
@@ -17,4 +17,4 @@ const StyledTagItem = styled.div`
   }
 `;
 
-export default StyledTagItem;
+export default TagItemWrapper;

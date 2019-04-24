@@ -1,35 +1,47 @@
 import React, { useState } from 'react';
 import ContactItem from '../ContactItem/ContactItem';
-import styledContactList from'./styledContactList';
+import MessageList from '../MessageList/MessageList';                            
+import ContactListWrapper from'./ContactListWrapper';
 
-function ContactList(props) {
-  const [isOpened, setIsOpened] = useState(false);
-  const [isExtended, setIsExtended] = useState(false);
+function ContactList() {
+  const [preview, setPreview] = useState(0);
+  const [view, setView] = useState(0);
 
-  function handleClick(e) {
+  function handlePreview(e) {
     e.stopPropagation();
-    if (!isExtended) 
-      return setIsOpened(!isOpened);
+    if ((view === 0 || view === 2) && preview === 0) 
+      return setPreview(1);
+    else if ((view === 0 || view === 2) && preview === 1) 
+      return setPreview(2);
+    else if ((view === 0 || view === 2) && preview === 2) 
+      return setPreview(1);
   }
 
-  function handleExtend(e) {
+  function handleView(e) {
     e.stopPropagation();
-    return setIsExtended(!isExtended);
+    if (view === 0) 
+      return setView(1);
+    if (view === 1) {
+      setView(2);
+      setPreview(2);
+    }
+    if (view === 2) 
+      return setView(1);
+
   }
 
   return (
-    <div className={props.className} open={isOpened}>
-      {(!isExtended || (isExtended && isOpened)) &&
-        <h1>Messages</h1>
-      }
+    <ContactListWrapper preview={preview} view={view}>
+      <h1 className="contact-list__title">Messages</h1>
       <ContactItem
-        open={isOpened}
-        extend={handleExtend}
-        extended={isExtended}
-        action={handleClick}
+        preview={preview}
+        handleView={handleView}
+        view={view}
+        handlePreview={handlePreview}
       />
-    </div>
+      <MessageList view={view} preview={preview} />
+    </ContactListWrapper>
   );
 }
 
-export default styledContactList(ContactList);
+export default ContactList;

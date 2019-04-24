@@ -1,16 +1,17 @@
 import React from 'react';
 import MessageItem from '../MessageItem/MessageItem';
-import styledMessageList from'./styledMessageList';
+import MessageListWrapper from'./MessageListWrapper';
+import Send from '../Styled/Send';
 
-function MessageList(props) {
-  const mine = true;
-  return (
-    <div className={props.className}>
-      <MessageItem mine={mine} />
+const MessageList = ({ view, preview }) =>
+  <MessageListWrapper view={view} preview={preview}>
+  {console.log('preview: ', preview, 'view: ', view, '\n')}
+    <div className="message-list">
+      <MessageItem mine={true} />
       <MessageItem mine={false} />
       <MessageItem mine={false} />
     </div>
-  );
-}
+    <Send view={view} preview={preview} />
+  </MessageListWrapper>
 
-export default styledMessageList(MessageList);
+export default MessageList;

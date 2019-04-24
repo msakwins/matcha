@@ -1,18 +1,10 @@
-import React , { useState } from 'react';
+import React, { useState } from 'react';
+import M33t from './M33t/M33t';
+
 import Header from './Header/Header';
-// import Footer from './Footer/Footer';
-import ContactList from './ContactList/ContactList';
-import HomePage from './HomePage/HomePage';
-// import SignUp from './SignUp/SignUp';
-import Menu from './Menu/Menu';
-import SearchBar from './SearchBar/SearchBar';
-import MessageList from './MessageList/MessageList';
-import Profile from './Profile/Profile';
-// import SignIn from './SignIn/SignIn';
-import MyProfile from './MyProfile/MyProfile';
-import FavList from './FavList/FavList';
-import Settings from './Settings/Settings';
-import { BrowserRouter as Router, Route } from "react-router-dom";
+
+
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import AppWrapper from './AppWrapper';
 
@@ -40,18 +32,12 @@ const theme = {
   },
 };
 
-function App(props) {
-  const [openSearch, setOpenSearch] = useState(null);
+function App() {
+  const [isLogged, setIsLogged] = useState(false);
   const [changeTheme, setChangeTheme] = useState(1);
-  /*
-  const [isLogged, setIsLogged] = useState(null);
-  function handleClick() {
-    return setIsLogged(true);
-  }
-*/
 
-  function handleSearch() {
-    return setOpenSearch(!openSearch);
+  function handleLogging() {
+    return setIsLogged(!isLogged);
   }
 
   function handleTheme(themeNumber) {
@@ -63,21 +49,8 @@ function App(props) {
     <Router>
       <ThemeProvider theme={theme[changeTheme]}>
         <AppWrapper>
-            <Route path="/messages" component={ContactList} />
-            <Route exact path="/" component={HomePage} />
-            <Route path="/profile" component={Profile} />
-            <Route path="/messageid" component={MessageList} />
-            <Route path="/my-profile" component={MyProfile} />
-            <Route path="/favs" component={FavList} />
-            <Route path="/settings" render={(props) => <Settings {...props} action={handleTheme}/>} />
-            <SearchBar openSearch={openSearch} />
-            <Header />
-            <Menu
-              openSearch={openSearch} 
-              action={handleSearch}
-              />
-            { /* <SignIn isLogged={isLogged} action={handleClick}/> */ }
-            { /* <Footer /> */ }
+          <M33t handleLogging={handleLogging} isLogged={isLogged} />
+          <Header />
         </AppWrapper>
       </ThemeProvider>
     </Router>

@@ -1,15 +1,17 @@
-import { theme } from '../theme.js';
+import theme from '../theme.js';
 import styled from 'styled-components';
 
 
-export default (Component) => styled(Component)`
-  padding: 10px;
+const SignInWrapper = styled.div`
   width: 100%;
+  height: calc(100vh - 60px);
+  
+  padding: 10px;
   padding: 40px auto;
+  margin: 60px auto 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 90vh;
   background: ${theme.colors.darkBlue};
 
   h1 {
@@ -38,3 +40,5 @@ export default (Component) => styled(Component)`
     margin: 10px 0 0;
   }
 `;
+
+export default SignInWrapper;

@@ -1,7 +1,7 @@
-import { theme } from '../theme.js';
+import theme from '../theme.js';
 import styled from 'styled-components';
 
-export default (Component) => styled(Component)`
+const MessageItemWrapper = styled.div`
   width: fit-content;
   max-width: 70%;
   height: auto;
@@ -24,3 +24,5 @@ export default (Component) => styled(Component)`
     align-self: flex-end;
   `}
 `;
+
+export default MessageItemWrapper;

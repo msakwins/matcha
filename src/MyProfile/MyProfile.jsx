@@ -22,6 +22,7 @@ function MyProfile(props) {
         <span className="profile__name">Nioki</span>
         <span className="profile__age">24</span>
         <span className="profile__activity">Freelance cat</span>
+        <img className="my-profile__edit" alt="edit" src="/edit.svg"></img>
       </div>
       <TagList />
       <div className="profile__about">

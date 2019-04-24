@@ -1,4 +1,4 @@
-import { theme } from '../theme.js';
+import theme from '../theme.js';
 import styled from 'styled-components';
 
 
@@ -12,6 +12,7 @@ const MyProfileWrapper = styled.div`
   position: relative;
   top: 60px;
 
+  
   img {
     width: 160px;
     border-radius: 100%;
@@ -21,6 +22,11 @@ const MyProfileWrapper = styled.div`
       height: 100%;
       border-radius: 0;
       `}
+  }
+
+  .my-profile__edit {
+    height: 18px;
+    margin: 5px 0;
   }
   
   .profile__info {
@@ -49,7 +55,6 @@ const MyProfileWrapper = styled.div`
 
   .profile__about {
     text-align: left;
-    padding: 10px;
     margin: 10px 0;
     width: 100%;
     display: flex;

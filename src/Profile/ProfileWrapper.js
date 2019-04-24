@@ -1,8 +1,8 @@
-import { theme } from '../theme.js';
+import theme from '../theme.js';
 import styled from 'styled-components';
 
 
-const StyledProfile = styled.div`
+const ProfileWrapper = styled.div`
   display: flex;
   margin: 60px auto;
   padding: 10px;
@@ -45,4 +45,4 @@ const StyledProfile = styled.div`
   }
 `;
 
-export default StyledProfile
+export default ProfileWrapper

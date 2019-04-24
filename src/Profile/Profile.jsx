@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import TagList from '../TagList/TagList';
-import StyledProfile from'./styledProfile';
+import ProfileWrapper from'./ProfileWrapper';
 
 function Profile(props) {
   const [openPhoto, setOpenPhoto] = useState(false);
@@ -20,7 +20,7 @@ function Profile(props) {
 }
 
   return (
-    <StyledProfile like={like} photo={openPhoto}>
+    <ProfileWrapper like={like} photo={openPhoto}>
       <img
         className="profile__user-photo"
         alt="user"
@@ -30,8 +30,8 @@ function Profile(props) {
       <span className="profile__user-name">Nioki</span>
       <button className="profile__fav" onClick={handleLike} like={props.like}/>
       <TagList />
-    </StyledProfile>
+    </ProfileWrapper>
   );
 }
 
-export default (Profile);
+export default Profile;

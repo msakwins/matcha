@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { theme } from '../theme';
+import theme from '../theme';
 
 const Button = styled.button`
   position: relative;
@@ -10,7 +10,7 @@ const Button = styled.button`
   align-items: center;
   cursor: pointer;
   font-family: ${theme.font.primary};
-  border: none;
+  border: 1px solid ${theme.colors.darkBlue};
   background: ${theme.colors.darkBlue};
   border: 1px solid ${theme.colors.white};
   height: 40px;
@@ -24,11 +24,25 @@ const Button = styled.button`
   box-shadow: inset 0 0 0 0 ${theme.colors.lightBlue};
   text-transform: uppercase;
 
+  ${({ light }) => light && `
+    box-shadow: inset 0 0 0 0 ${theme.colors.darkBlue};
+    border: 1px solid ${theme.colors.darkBlue};
+    background: ${theme.colors.white};
+    color: ${theme.colors.darkBlue};
+  `};
   
   :hover {
-    box-shadow: inset 200px 0 0 0 ${theme.colors.lightBlue};
-    color: ${theme.colors.darkBlue};
-    border-color: ${theme.colors.lightBlue};
+    @media all and (min-width: 768px) {
+      box-shadow: inset 200px 0 0 0 ${theme.colors.lightBlue};
+      color: ${theme.colors.darkBlue};
+      border-color: ${theme.colors.lightBlue};
+      
+      ${({ light }) => light && `
+      box-shadow: inset 200px 0 0 0 ${theme.colors.darkBlue};
+      border: 1px solid ${theme.colors.darkBlue};
+      color: ${theme.colors.white};
+      `}
+    }
   }
 `;
 

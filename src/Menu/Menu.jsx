@@ -11,35 +11,38 @@ const menuItems = [
     path: '/settings',
   },
   {
-    bg: '/user.png',
-    path: '/my-profile',
-  },
-  {
-    path: '/',
-  },
-  {
     bg: '/heart.svg',
     selected: '/heart-selected.svg',
     path: '/favs',
+  },
+  {
+    path: '/',
   },
   {
     bg: '/chat.svg',
     selected: '/chat-selected.svg',
     path: '/messages',
   },
+  {
+    bg: '/user.png',
+    path: '/my-profile',
+  },
 
 ];
-function Menu(props) {
+
+const Menu = ({ handleSearch, openSearch, url }) =>
+{
   return (
     <MenuWrapper
-      search={props.openSearch}
-      menuItem={menuItems}>
+      search={openSearch}
+      menuItem={menuItems}
+    >
       {/*<button className="menu__button-search" onClick={props.action} /> */}
       {menuItems.map((menuItem, index) => (
-        <MenuItem menuItem={menuItem} key={index} url={props.location.pathname}/>
+        <MenuItem menuItem={menuItem} key={index} url={url}/>
         ))}
     </MenuWrapper>
-  );
+  )
 }
 
 export default withRouter(Menu);
