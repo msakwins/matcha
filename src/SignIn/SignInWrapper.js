@@ -5,9 +5,7 @@ import styled from 'styled-components';
 const SignInWrapper = styled.div`
   width: 100%;
   height: calc(100vh - 60px);
-  
-  padding: 10px;
-  padding: 40px auto;
+  padding: 40px 10px;
   margin: 60px auto 0;
   display: flex;
   flex-direction: column;
@@ -18,10 +16,12 @@ const SignInWrapper = styled.div`
     color: ${theme.colors.white};
   }
 
-  .signin__forgot-password {
+  .sign-in__forgot-password {
     font-family: ${theme.font.primary};
     font-size: 14px;
+    margin: 0 0 30px;
     color: ${theme.colors.white};
+    text-decoration: underline;
   }
 
   .signin__signup {

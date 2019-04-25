@@ -4,7 +4,7 @@ import M33t from './M33t/M33t';
 import Header from './Header/Header';
 
 
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import AppWrapper from './AppWrapper';
 
@@ -37,11 +37,11 @@ function App() {
   const [changeTheme, setChangeTheme] = useState(1);
 
   function handleLogging() {
-    return setIsLogged(!isLogged);
+    setIsLogged(!isLogged);
   }
 
   function handleTheme(themeNumber) {
-    return setChangeTheme(themeNumber);
+    setChangeTheme(themeNumber);
   }
 
 

@@ -5,6 +5,7 @@ const MessageItemWrapper = styled.div`
   width: fit-content;
   max-width: 70%;
   height: auto;
+  min-height: 37px;
   padding: 10px 20px;
   background: ${theme.colors.lightestBlue};
   display: flex;

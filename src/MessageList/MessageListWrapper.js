@@ -11,6 +11,7 @@ const MessageListWrapper = styled.div`
   box-shadow: none;
   ${({ view, preview }) => (view === 1 || preview === 1) && `
     box-shadow: 4px -4px 0px 0px ${theme.colors.lightBlue};
+    border: 1px solid ${theme.colors.grey};
   `}
 
   ${({ view }) => (view === 2) && `
@@ -33,6 +34,7 @@ const MessageListWrapper = styled.div`
     display: flex;
     flex-direction: column;
     padding: 10px;
+    height: 130px;
     max-height: 130px;
     overflow-y: scroll;
 
@@ -43,6 +45,7 @@ const MessageListWrapper = styled.div`
     ${({ view, preview }) => (view === 1 || preview === 1) && `
       animation: animOpenView 0.3s forwards;
       max-height: unset;
+      height: auto;
     `}
   }
 

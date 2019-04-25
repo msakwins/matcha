@@ -10,8 +10,17 @@ const SignUpWrapper = styled.div`
   height: 100%;
   width: 100%;
   position: relative;
-  flex-wrap: nowrap;
   white-space: nowrap;
+
+  .sign-up__steps {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    top: 60px;
+  }
 
   .sign-up__filled {
     width: 180px;
@@ -30,30 +39,19 @@ const SignUpWrapper = styled.div`
   }
 
   .sign-up__buttons {
-    padding: 10px;
     width: 100%;
+    height: 80px;
     position: absolute;
     bottom: 0;
     background-color: ${theme.colors.darkBlue};
     display: flex;
     flex-direction: row;
     justify-content: center;
-
-    .sign-up__button {
-      &-next {
-      }
-
-      &-back {
-      }
-
-      &-skip {
-      }
-    }
   }
 
   .sign-up__first-step {
-    width: 100%;
     height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,8 +59,9 @@ const SignUpWrapper = styled.div`
     position: relative;
     left: 0;
     ${({ page }) => page === 1 && `
-      transition: width 0.2s;
-      width: 0;
+      transition: width 0.5s, left 0.5s;
+      width: 0px;
+      left: -100%;
     `};
 
     ${({ page }) => page === 2 && `
@@ -71,7 +70,8 @@ const SignUpWrapper = styled.div`
     `};
 
     ${({ page }) => page === 0 && `
-      transition: width 0.2s;
+      transition: left 0.5s, width 0.2s;
+      left: 0;
       width: 100%;
     `};
   }
@@ -87,15 +87,15 @@ const SignUpWrapper = styled.div`
     left: 100%;
 
     ${({ page }) => page === 1 && `
-      transition: left 0.3s, width 0.2s;
+      transition: left 0.5s, width 0.2s;
       left: 0;
       width: 100%;
     `}
 
     ${({ page }) => page === 2 && `
-      transition: left 0.3s, width 0.2s;
-      left: 0;
-      width: 0;
+      transition: width 0.5s, left 0.5s;
+      width: 0px;
+      left: -100%;
     `}
 
     .sign-up__photo {
@@ -139,7 +139,7 @@ const SignUpWrapper = styled.div`
     left: 100%;
 
     ${({ page }) => page === 2 && `
-      transition: left 0.3s, width 0.2s;
+      transition: left 0.5s, width 0.2s;
       left: 0;
       width: 100%;
     `}

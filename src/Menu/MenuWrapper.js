@@ -9,13 +9,21 @@ const MenuWrapper = styled.div`
   flex-direction: row;
   width: 100%;
   background: ${theme.colors.white};
-  padding: 0 20px;
   border-top: 1px solid ${theme.colors.lightBlue};
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 
   @media all and (min-width: 768px) {
     top: 60px;
+    height: 100%;
+    width: 60px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 0;
+    position: fixed;
+    border: none;
+    border-right: 2px solid ${theme.colors.grey};
   } 
 
   .menu__search-input {

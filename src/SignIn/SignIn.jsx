@@ -10,10 +10,7 @@ function SignIn({ handleLogging, isLogged }) {
         placeholder="Password"
         type="text"
         />
-      <div className="signin__forgot-password">
-        <span>Forgot your password? </span>
-        <Link to="/recover">reset my password</Link>
-      </div>
+      <Link className="sign-in__forgot-password" to="/recover">Forgot your password?</Link>
       <Button onClick={handleLogging}>Login</Button>
       <div className="signin__signup">
         <span>You don't have an account yet? </span>

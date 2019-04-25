@@ -8,11 +8,13 @@ const MyProfileWrapper = styled.div`
   align-items: center;
   background-color: ${theme.colors.white};
   color: ${theme.colors.darkGrey};
-  position: relative;
-  top: 60px;
   padding: 10px 10px 0;
+  width: 100%;
 
-  
+  @media all and (min-width: 768px) {
+    margin: 0 0 0 60px;
+  }
+
   img {
     width: 160px;
     border-radius: 100%;

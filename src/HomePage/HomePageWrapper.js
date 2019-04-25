@@ -5,11 +5,15 @@ const HomePageWrapper = styled.div`
   height: 100%;
   max-width: 1024px;
   padding: 0 20px;
-  margin: 60px auto;
+  margin: 0 auto;
   color: ${props => props.theme.fontPrimary};
   background: ${props => props.theme.bgPrimary};
   padding: 10px;
 
+  @media all and (min-width: 768px) {
+    margin: 0 0 0 60px;
+  }
+  
   img {
     height: 50px;
   }

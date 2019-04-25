@@ -11,6 +11,8 @@ const ContactItemWrapper = styled.div`
   margin: 10px;
   top: 30px;
   box-shadow: 4px -4px 0px 0px ${theme.colors.lightBlue};
+  border: 1px solid ${theme.colors.grey};
+  cursor: pointer;
 
   .contact-item__message-list {
     height: 100%;

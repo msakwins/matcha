@@ -5,7 +5,6 @@ import Send from '../Styled/Send';
 
 const MessageList = ({ view, preview }) =>
   <MessageListWrapper view={view} preview={preview}>
-  {console.log('preview: ', preview, 'view: ', view, '\n')}
     <div className="message-list">
       <MessageItem mine={true} />
       <MessageItem mine={false} />

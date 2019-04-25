@@ -6,7 +6,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: #24305E;
   scroll-behavior: smooth;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 div, input, button, form, a, span, img {

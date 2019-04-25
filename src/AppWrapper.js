@@ -9,7 +9,7 @@ const AppWrapper = styled.div`
   input {
 
     ::placeholder {
-      font-size: 12px;
+      font-size: 14px;
     }
   }
   

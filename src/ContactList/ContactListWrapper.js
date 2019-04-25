@@ -4,11 +4,15 @@ import styled from 'styled-components';
 const ContactListWrapper = styled.div`
   width: 100%;
   height: 100%; /* WHY */
-  background: ${theme.colors.darkBlue};
+  background: ${theme.colors.white};
   color: ${theme.colors.white};
   display: flex;
   flex-direction: column;
-  margin: 60px auto 0;
+  margin: 0 auto 0;
+
+  @media all and (min-width: 768px) {
+    margin: 0 0 0 60px;
+  }
 
   .contact-list__title {
     position: absolute;

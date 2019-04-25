@@ -47,15 +47,9 @@ const Button = styled.button`
     color: ${theme.colors.darkBlue};
   `};
 
-  ${({ smaller }) => smaller && `
+  ${({ small }) => small && `
     width: 40px;
     min-width: 40px;
-    font-size: 14px;
-  `};
-
-  ${({ small }) => small && `
-    width: 50px;
-    min-width: 50px;
     font-size: 14px;
   `};
 
@@ -82,10 +76,10 @@ const buttonLink = styled(Link)`
   background: ${theme.colors.darkBlue};
   border: 1px solid ${theme.colors.white};
   height: 40px;
-  width: 200px;
+  width: 180px;
   outline: none;
   padding: 0 10px;
-  margin: 20px 0 20px;
+  margin: 10px 5px;
   font-size: 14px;
   color: ${theme.colors.white};
   transition: all 0.4s ease-out;

@@ -12,15 +12,21 @@ const MenuItemWrapper = styled(Link)`
   background-image: url(${({ bg, selected, path, url }) => (bg && selected && path === url) ? `${selected}` : bg});
   background-size: 30px;
   background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  justify-content: center;
+
+  ${({ path }) => path === '/' && `
+    width: 100px;
+  `}
 
   .menu-item__logo {
-    height: 40px;
     display: flex;
     align-items: center;
     font-family: ${theme.font.logo};
     color: ${theme.colors.darkBlue};
     text-shadow: 2px 2px ${theme.colors.lightBlue};
-    margin: 0 0 4px;
+    margin: 0 5px 4px;
 
     :visited {
       color: ${theme.colors.darkBlue};

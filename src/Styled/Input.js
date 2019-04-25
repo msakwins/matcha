@@ -12,7 +12,7 @@ const Input = styled.input`
   outline: none;
   padding: 0 10px;
   border-radius: 0;
-  margin: 20px 0 20px;
+  margin: 10px 0 10px;
   color: ${theme.colors.white};
   font-family: ${theme.font.primary};
 
