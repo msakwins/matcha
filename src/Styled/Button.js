@@ -14,15 +14,31 @@ const Button = styled.button`
   background: ${theme.colors.darkBlue};
   border: 1px solid ${theme.colors.white};
   height: 40px;
-  width: 200px;
+  width: 180px;
   outline: none;
   padding: 0 10px;
-  margin: 20px 0 20px;
+  margin: 10px 5px;
   font-size: 14px;
   color: ${theme.colors.white};
   transition: all 0.4s ease-out;
   box-shadow: inset 0 0 0 0 ${theme.colors.lightBlue};
   text-transform: uppercase;
+
+  ${({ hover }) => hover && `
+    :hover {
+      @media all and (min-width: 768px) {
+        box-shadow: inset 200px 0 0 0 ${theme.colors.lightBlue};
+        color: ${theme.colors.darkBlue};
+        border-color: ${theme.colors.lightBlue};
+        
+        ${({ light }) => light && `
+        box-shadow: unset;
+        border: 1px solid ${theme.colors.darkBlue};
+        color: ${theme.colors.darkBlue};
+        `}
+      }
+    }
+  `};
 
   ${({ light }) => light && `
     box-shadow: inset 0 0 0 0 ${theme.colors.darkBlue};
@@ -30,20 +46,30 @@ const Button = styled.button`
     background: ${theme.colors.white};
     color: ${theme.colors.darkBlue};
   `};
-  
-  :hover {
-    @media all and (min-width: 768px) {
-      box-shadow: inset 200px 0 0 0 ${theme.colors.lightBlue};
-      color: ${theme.colors.darkBlue};
-      border-color: ${theme.colors.lightBlue};
-      
-      ${({ light }) => light && `
-      box-shadow: inset 200px 0 0 0 ${theme.colors.darkBlue};
-      border: 1px solid ${theme.colors.darkBlue};
-      color: ${theme.colors.white};
-      `}
-    }
-  }
+
+  ${({ smaller }) => smaller && `
+    width: 40px;
+    min-width: 40px;
+    font-size: 14px;
+  `};
+
+  ${({ small }) => small && `
+    width: 50px;
+    min-width: 50px;
+    font-size: 14px;
+  `};
+
+  ${({ bg }) => bg && `
+    background-image: url(${bg});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+  `};
+
+  ${({ nude }) => nude && `
+    background-color: transparent;
+    background-size: 30px;
+  `}
 `;
 
 const buttonLink = styled(Link)`

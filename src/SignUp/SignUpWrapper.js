@@ -12,19 +12,43 @@ const SignUpWrapper = styled.div`
   position: relative;
   flex-wrap: nowrap;
   white-space: nowrap;
-  padding: 10px;
+
+  .sign-up__filled {
+    width: 180px;
+    text-align: left;
+    margin: 20px 0 0;
+  }
 
   .sign-up__fields {
     display: flex;
     flex-direction: column;
-    max-height: calc(100% - 230px);
+    max-height: calc(100% - 150px);
     overflow-x: auto;
     align-items: center;
+    padding: 10px;
+    width: 100%;
   }
 
   .sign-up__buttons {
+    padding: 10px;
+    width: 100%;
     position: absolute;
     bottom: 0;
+    background-color: ${theme.colors.darkBlue};
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    .sign-up__button {
+      &-next {
+      }
+
+      &-back {
+      }
+
+      &-skip {
+      }
+    }
   }
 
   .sign-up__first-step {
@@ -75,12 +99,32 @@ const SignUpWrapper = styled.div`
     `}
 
     .sign-up__photo {
-      width: 100px;
-      height: 100px;
-      min-height: 100px;
-      min-width: 100px;
-      border: 1px solid ${theme.colors.grey};
-      border-radius: 100%;
+      width: 180px;
+      height: 40px;
+      min-height: 50px;
+      display: flex;
+      flex-direction: row;
+      
+      img {
+        border: 1px solid ${theme.colors.grey};
+        height: 40px;
+        width: 40px;
+      }
+      
+      input {
+        width: 75px;
+        height: 40px;
+        margin: 0 10px;
+        border: none;
+        padding: 0;
+        ::placeholder {
+          text-decoration: underline;
+        }
+      }
+
+      button {
+        margin: 0;
+      }
     }
   }
 

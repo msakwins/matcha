@@ -9,7 +9,7 @@ body {
   overflow: scroll;
 }
 
-div, input, button, form, a {
+div, input, button, form, a, span, img {
   box-sizing: border-box;
   outline: none;
   text-decoration: none;

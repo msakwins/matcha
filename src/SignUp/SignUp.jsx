@@ -34,27 +34,31 @@ const SignUp = () => {
         <Input dark placeholder="Password" type="text"/>
       </div>
       <div className="sign-up__buttons">
-        <Button light className="sign-up__button" onClick={handleNextPage}>Next</Button>
+        <Button light className="sign-up__button-next" onClick={handleNextPage}>Next</Button>
       </div>
     </div>
     <div className="sign-up__second-step">
       <h2>Fill your profile</h2>
       <div className="sign-up__fields">
         <div className="sign-up__photo">
-          <button></button>
+          <img alt="" src="/user.png"></img>
+          <Input dark placeholder="../users/marion"></Input>
+          <Button smaller bg="/photo.svg" nude/>
         </div>
+        <span className="sign-up__filled">Marion</span>
+        <span className="sign-up__filled">Skw</span>
+        <span className="sign-up__filled">marion.s@mail.com</span>
         <Input dark placeholder="Age" type="number"/>
         <Input dark placeholder="Activity" type="text"/>
-        <Input dark placeholder="E-mail" type="text"/>
         <Input dark placeholder="Interests" type="text"/>
         <Input dark placeholder="Interests" type="text"/>
         <Input dark placeholder="Interests" type="text"/>
         <Input dark placeholder="Interests" type="text"/>
       </div>
       <div className="sign-up__buttons">
-        <button className="sign-up__button">Skip</button>
-        <Button light className="sign-up__button" onClick={handlePreviousPage}>Back</Button>
-        <Button light className="sign-up__button" onClick={handleNextPage}>Next</Button>
+        <Button bg="/left-arrow.svg" smaller className="sign-up__button-back" onClick={handlePreviousPage} />
+        <Button light className="sign-up__button-next" onClick={handleNextPage}>Next</Button>
+        <Button small className="sign-up__button-skip">Skip</Button>
       </div>
     </div>
     <div className="sign-up__third-step">
@@ -64,9 +68,9 @@ const SignUp = () => {
         <Input dark placeholder="Interests" type="text"/>
       </div>
       <div className="sign-up__buttons">
-        <button className="sign-up__button">Skip</button>
-        <Button light className="sign-up__button" onClick={handlePreviousPage}>Back</Button>
-        <Button light className="sign-up__button">Create</Button>
+        <Button smaller className="sign-up__button-back" onClick={handlePreviousPage} />
+        <Button light className="sign-up__button-next">Create</Button>
+        <Button small className="sign-up__button-skip">Skip</Button>
       </div>
     </div>
   </SignUpWrapper>
