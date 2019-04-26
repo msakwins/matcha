@@ -79,7 +79,7 @@ const ProfileWrapper = styled.div`
       box-shadow: 14px 6px 0px 0px ${theme.colors.darkPink};
       transition: all 0.1s;
       position: absolute;
-      right: 0;
+      right: 10px;
       top: 20px;
       ${({ like }) => like === 2 && `
         animation: particle2 1.3s;
@@ -157,7 +157,7 @@ const ProfileWrapper = styled.div`
     100% {
       height: 0px;
       width: 0px;
-      right: -20px;
+      right: -10px;
       top: 10px;
     }
   }
