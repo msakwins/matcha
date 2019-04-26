@@ -4,14 +4,15 @@ import styled from 'styled-components';
 const MessageListWrapper = styled.div`
   background: ${theme.colors.white};
   display: flex;
-  margin: 10px;
+  margin: 0 10px 10px;
   flex-direction: column;
   overflow: hidden;
   height: 0px;
   box-shadow: none;
   ${({ view, preview }) => (view === 1 || preview === 1) && `
-    box-shadow: 4px -4px 0px 0px ${theme.colors.lightBlue};
+    box-shadow: 4px -4px 0px 0px ${theme.colors.grey};
     border: 1px solid ${theme.colors.grey};
+    border-top: none;
   `}
 
   ${({ view }) => (view === 2) && `

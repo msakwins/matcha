@@ -6,7 +6,6 @@ const SignUpWrapper = styled.div`
   align-items: center;
   flex-direction: row;
   background: ${theme.colors.white};
-  color: ${theme.colors.darkBlue};
   height: 100%;
   width: 100%;
   position: relative;
@@ -43,10 +42,25 @@ const SignUpWrapper = styled.div`
     height: 80px;
     position: absolute;
     bottom: 0;
-    background-color: ${theme.colors.darkBlue};
+    background-color: ${theme.colors.white};
     display: flex;
     flex-direction: row;
     justify-content: center;
+
+    .sign-up__button-next {
+      border-color: ${theme.colors.lightBlue};
+      color: ${theme.colors.lightBlue};
+    }
+
+    .sign-up__button-skip {
+      border-color: ${theme.colors.mediumGrey};
+      color: ${theme.colors.mediumGrey};
+    }
+
+    .sign-up__button-back {
+      border-color: ${theme.colors.mediumGrey};
+      color: ${theme.colors.mediumGrey};
+    }
   }
 
   .sign-up__first-step {

@@ -30,7 +30,7 @@ const SearchBarWrapper = styled.div`
     background-position: center right 15px;
 
     ::placeholder {
-      color: ${theme.colors.darkBlue};
+      color: ${theme.colors.black};
       opacity: 0.5;
     }
   }

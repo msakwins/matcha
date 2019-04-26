@@ -10,9 +10,8 @@ const Button = styled.button`
   align-items: center;
   cursor: pointer;
   font-family: ${theme.font.primary};
-  border: 1px solid ${theme.colors.darkBlue};
-  background: ${theme.colors.darkBlue};
-  border: 1px solid ${theme.colors.white};
+  border: 1px solid ${theme.colors.lightBlue};
+  background: ${theme.colors.lightBlue};
   height: 40px;
   width: 180px;
   outline: none;
@@ -28,23 +27,23 @@ const Button = styled.button`
     :hover {
       @media all and (min-width: 768px) {
         box-shadow: inset 200px 0 0 0 ${theme.colors.lightBlue};
-        color: ${theme.colors.darkBlue};
+        color: ${theme.colors.black};
         border-color: ${theme.colors.lightBlue};
         
         ${({ light }) => light && `
         box-shadow: unset;
-        border: 1px solid ${theme.colors.darkBlue};
-        color: ${theme.colors.darkBlue};
+        border: 1px solid ${theme.colors.black};
+        color: ${theme.colors.black};
         `}
       }
     }
   `};
 
   ${({ light }) => light && `
-    box-shadow: inset 0 0 0 0 ${theme.colors.darkBlue};
-    border: 1px solid ${theme.colors.darkBlue};
+    box-shadow: inset 0 0 0 0 ${theme.colors.black};
+    border: 1px solid ${theme.colors.black};
     background: ${theme.colors.white};
-    color: ${theme.colors.darkBlue};
+    color: ${theme.colors.black};
   `};
 
   ${({ small }) => small && `
@@ -73,8 +72,8 @@ const buttonLink = styled(Link)`
   align-items: center;
   cursor: pointer;
   border: none;
-  background: ${theme.colors.darkBlue};
-  border: 1px solid ${theme.colors.white};
+  border: 1px solid ${theme.colors.lightBlue};
+  background: ${theme.colors.lightBlue};
   height: 40px;
   width: 180px;
   outline: none;
@@ -87,13 +86,17 @@ const buttonLink = styled(Link)`
   font-family: ${theme.font.primary};
   text-transform: uppercase;
   text-decoration: none;
-
   
-  :hover {
-    box-shadow: inset 200px 0 0 0 ${theme.colors.lightBlue};
-    color: ${theme.colors.darkBlue};
-    border-color: ${theme.colors.lightBlue};
-  }
+  ${({ light }) => light && `
+    background: ${theme.colors.white};
+    border: 1px solid ${theme.colors.lightBlue};
+    color: ${theme.colors.lightBlue};
+  `};
+
+  ${({ light, grey }) => light && grey && `
+    border: 1px solid ${theme.colors.darkGrey};
+    color: ${theme.colors.darkGrey};
+  `};
 `;
 
 export { Button, buttonLink };

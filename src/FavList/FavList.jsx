@@ -4,13 +4,11 @@ import FavListWrapper from './FavListWrapper';
 
 const FavList = () =>
 <FavListWrapper>
-  <span className="fav-list__logo">M33ts</span>
+  <span className="fav-list__logo">M33t's</span>
   <FavItem />
-  <img alt="none" src="/heart-none.svg"></img>
+  <img alt="none" src="/heart.svg"></img>
   <img alt="like" src="/heart-like.svg"></img>
-  <img alt="both-like" src="/heart-both-like.svg"></img>
   <img alt="love" src="/heart-love.svg"></img>
-  <img alt="both-love" src="/heart-both-love.svg"></img>
 </FavListWrapper>
 
 export default FavList;

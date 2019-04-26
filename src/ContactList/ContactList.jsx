@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ContactItem from '../ContactItem/ContactItem';
+import { Title } from '../Styled';
 import MessageList from '../MessageList/MessageList';                            
 import ContactListWrapper from'./ContactListWrapper';
 
@@ -27,12 +28,11 @@ function ContactList() {
     }
     if (view === 2) 
       return setView(1);
-
   }
 
   return (
     <ContactListWrapper preview={preview} view={view}>
-      <h1 className="contact-list__title">Messages</h1>
+      <Title>Messages</Title>
       <ContactItem
         preview={preview}
         handleView={handleView}

@@ -39,13 +39,13 @@ const M33t = (props) => {
     <Route path="/profile" component={Profile} />
     <Route path="/messageid" component={MessageList} />
     <Route path="/my-profile" component={MyProfile} />
-    <Route path="/settings" render={(props) =>
-    <Settings {...props}
+    <Route path="/settings" render={(propis) =>
+    <Settings {...propis}
       handleTheme={props.handleTheme}
       handleLogging={props.handleLogging}
       isLogged={props.isLogged}
     />} />
-    {console.log(props.isLogged)}
+    {console.log(props.handleLogging)}
   </M33tWrapper>
   );
 };

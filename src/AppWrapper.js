@@ -7,18 +7,18 @@ const AppWrapper = styled.div`
   cursor: default;
 
   input {
-
+    font-size: 16px;
     ::placeholder {
       font-size: 14px;
     }
   }
   
-  .change-theme {
-    height: 50px;
-    width: 50px;
-    position: relative;
-    bottom: 0;
-    background: red;
+  a {
+    color: #4c4c4c;
+
+    :visited {
+      color: #4c4c4c;
+    }
   }
 
 

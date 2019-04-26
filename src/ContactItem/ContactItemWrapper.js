@@ -8,11 +8,12 @@ const ContactItemWrapper = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  margin: 10px;
-  top: 30px;
-  box-shadow: 4px -4px 0px 0px ${theme.colors.lightBlue};
+  margin: 0 10px;
+  top: 0;
+  box-shadow: 4px -4px 0px 0px ${theme.colors.grey};
   border: 1px solid ${theme.colors.grey};
   cursor: pointer;
+  border-bottom: ${({ view, preview }) => (view !== 1 && preview !== 1) ? `1px solid ${theme.colors.grey}` : 'none'};
 
   .contact-item__message-list {
     height: 100%;
@@ -31,7 +32,7 @@ const ContactItemWrapper = styled.div`
     &:after{
       content: "";
       position: absolute;
-      background-color: ${theme.colors.darkBlue};
+      background-color: ${theme.colors.black};
       transition: transform 0.25s ease-out;
     }
 

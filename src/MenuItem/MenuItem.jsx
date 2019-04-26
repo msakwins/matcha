@@ -10,7 +10,10 @@ const MenuItem = ({ menuItem: { path, bg, selected }, url }) =>
     path={path}
   >
   { path === '/' &&
-    <span className="menu-item__logo">M33t</span>
+    <span className="menu-item__logo"></span>
+  }
+  { path === '/my-profile' &&
+  <span className="menu-item__profile"></span>
   }
 </MenuItemWrapper>
 

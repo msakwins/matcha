@@ -7,7 +7,8 @@ const TagListWrapper = styled.div`
   flex-wrap: wrap;
   width: 100%;
   justify-content: center;
-
+  position: relative;
+  
   .tag-list {
     display: flex;
     flex-wrap: wrap;

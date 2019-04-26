@@ -8,12 +8,13 @@ const HeaderWrapper = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background: ${props => props.theme.bgSecondary};
+  background: ${theme.colors.white};
   font-size: 24px;
   font-weight: 600;
   font-family: ${theme.font.logo};
   position: absolute;
   top: 0;
+  border-bottom: 1px solid ${theme.colors.grey};
 
   .logo {
     display: flex;
@@ -21,8 +22,12 @@ const HeaderWrapper = styled.div`
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: ${props => props.theme.fontSecondary};
-    text-shadow: 2px 2px ${props => props.theme.fontTertiary};
+    color: ${theme.colors.grey};
+    text-shadow: 2px 2px ${theme.colors.black};
+
+    :visited {
+      color: ${theme.colors.grey};
+    }
   }
 `;
 

@@ -22,7 +22,7 @@ const SettingsWrapper = styled.div`
     height: 30px;
     width: 30px;
     border-radius: 100%;
-    background: ${theme.colors.darkBlue};
+    background: ${theme.colors.black};
     border: 1px solid ${theme.colors.grey};
     margin: 0 10px;
   }
@@ -45,6 +45,26 @@ const SettingsWrapper = styled.div`
     margin: 0 10px;
   }
 
+    .settings__my-palette {
+      height: 50px;
+      width: 200px;
+      display: block;
+      :nth-child(1) {
+        background-color: ${theme.colors.lightGrey};
+      }
+      :nth-child(2) {
+        background-color: ${theme.colors.grey};
+      }
+      :nth-child(3) {
+        background-color: ${theme.colors.mediumGrey};
+      }
+      :nth-child(4) {
+        background-color: ${theme.colors.darkGrey};
+      }
+      :nth-child(5) {
+        background-color: ${theme.colors.black};
+      }
+    }
 `;
 
 export default SettingsWrapper;

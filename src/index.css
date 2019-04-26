@@ -4,9 +4,9 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #24305E;
   scroll-behavior: smooth;
   overflow: hidden;
+  color: #4c4c4c;
 }
 
 div, input, button, form, a, span, img {
@@ -15,16 +15,8 @@ div, input, button, form, a, span, img {
   text-decoration: none;
 }
 
-input {
-  font-size: 16px;
-}
-
 button, a {
   cursor: pointer;
-}
-
-h1 {
-  font-size: 18px;
 }
 
 code {

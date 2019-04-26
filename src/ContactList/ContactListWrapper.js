@@ -5,7 +5,6 @@ const ContactListWrapper = styled.div`
   width: 100%;
   height: 100%; /* WHY */
   background: ${theme.colors.white};
-  color: ${theme.colors.white};
   display: flex;
   flex-direction: column;
   margin: 0 auto 0;
@@ -27,7 +26,6 @@ const ContactListWrapper = styled.div`
     font-size: 12px;
     height: 50px;
     background: ${theme.colors.white};
-    color: ${theme.colors.darkBlue};
     display: flex;
     flex-direction: column;
     transition: height 0.5s;
@@ -55,7 +53,6 @@ const ContactListWrapper = styled.div`
     font-size: 14px;
     font-weight: bold;
     letter-spacing: 0.05rem;
-    color: ${theme.colors.darkBlue};
   }
   
   .contact-list__item-preview {
@@ -67,7 +64,6 @@ const ContactListWrapper = styled.div`
     flex-direction: row;
     align-items: center;
     width: 100%;
-    top: 0;
   }
 
   button {

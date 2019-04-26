@@ -8,7 +8,7 @@ const FooterWrapper = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  background: ${theme.colors.darkBlue};
+  background: ${theme.colors.black};
   color: white;
   font-family: ${theme.font.primary};
   position: absolute;

@@ -15,7 +15,7 @@ const MessageItemWrapper = styled.div`
   letter-spacing: 0.03rem;
   font-weight: bold;
   text-align: left;
-  color: ${theme.colors.darkBlue};
+  color: ${theme.colors.black};
   margin: 10px 0 0;
 
   ${({ mine }) => mine && `

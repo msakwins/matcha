@@ -12,8 +12,16 @@ function Settings({ handleTheme, handleLogging, isLogged }) {
         <div className="settings__theme-3" onClick={() => handleTheme(3)}></div>
       </div>
       <div className="settings__log-out">
-        <BLink to="/register">SIGN UP</BLink>
+        <BLink onClick={handleLogging} to="/register">SIGN UP</BLink>
         <Button onClick={handleLogging}>LOG OUT</Button>
+      </div>
+      {console.log(handleLogging)}
+      <div className="settings__palette">
+        <div className="settings__my-palette"></div>
+        <div className="settings__my-palette"></div>
+        <div className="settings__my-palette"></div>
+        <div className="settings__my-palette"></div>
+        <div className="settings__my-palette"></div>
       </div>
     </SettingsWrapper>
   )

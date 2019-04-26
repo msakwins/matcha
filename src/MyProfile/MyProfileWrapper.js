@@ -6,7 +6,6 @@ const MyProfileWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: ${theme.colors.white};
   color: ${theme.colors.darkGrey};
   padding: 10px 10px 0;
   width: 100%;
@@ -39,7 +38,7 @@ const MyProfileWrapper = styled.div`
     .profile__name {
       font-weight: bold;
       letter-spacing: 0.05rem;
-      color: ${theme.colors.darkBlue};
+      color: ${theme.colors.black};
     }
   
     .profile__age {
@@ -50,7 +49,7 @@ const MyProfileWrapper = styled.div`
   
     .profile__activity {
       font-size: 14px;
-      color: ${theme.colors.darkBlue};
+      color: ${theme.colors.black};
       font-weight: bold;
     }
   }

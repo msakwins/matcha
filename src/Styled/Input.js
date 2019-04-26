@@ -2,18 +2,17 @@ import styled from 'styled-components';
 import theme from '../theme';
 
 const Input = styled.input`
+  width: 180px;
+  color: ${theme.colors.black};
   border: none;
-  border-bottom: 1px solid ${theme.colors.border};
+  border-bottom: 1px solid ${theme.colors.mediumGrey};
   background: transparent;
-  opacity: 0.8;
   height: 35px;
   min-height: 35px;
-  width: 180px;
   outline: none;
   padding: 0 10px;
   border-radius: 0;
   margin: 10px 0 10px;
-  color: ${theme.colors.white};
   font-family: ${theme.font.primary};
 
   :focus {
@@ -24,14 +23,13 @@ const Input = styled.input`
 
   ::placeholder {
     font-family: ${theme.font.primary};
-    color: ${({ dark }) => dark ? `${theme.colors.darkBlue}` : `${theme.colors.white}`};
+    color: ${theme.colors.mediumGrey};
     font-size: 16px;
-    opacity: 0.8;
   }
 
   ${({ dark }) => dark && `
-  color: ${theme.colors.darkBlue};
-    border-color: ${theme.colors.darkBlue};
+  color: ${theme.colors.black};
+    border-color: ${theme.colors.black};
 
   `};
 `;

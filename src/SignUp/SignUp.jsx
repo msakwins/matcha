@@ -71,16 +71,16 @@ const SignUp = () => {
     }
     {page === 1 &&
       <div className="sign-up__buttons">
-      <Button bg="/left-arrow.svg" small className="sign-up__button-back" onClick={handlePreviousPage} />
+      <Button light bg="/left-arrow.svg" small className="sign-up__button-back" onClick={handlePreviousPage} />
       <Button light className="sign-up__button-next" onClick={handleNextPage}>Next</Button>
-      <Button small bg="/right-arrow.svg" className="sign-up__button-skip" />
+      <Button light small bg="/right-arrow.svg" className="sign-up__button-skip" />
     </div>
     }
     {page === 2 &&
       <div className="sign-up__buttons">
-      <Button bg="/left-arrow.svg" small className="sign-up__button-back" onClick={handlePreviousPage} />
+      <Button light bg="/left-arrow.svg" small className="sign-up__button-back" onClick={handlePreviousPage} />
       <Button light className="sign-up__button-next">Create</Button>
-      <Button small bg="/right-arrow.svg" className="sign-up__button-skip" />
+      <Button light small bg="/right-arrow.svg" className="sign-up__button-skip" />
     </div>
     }
 

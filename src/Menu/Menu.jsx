@@ -24,7 +24,6 @@ const menuItems = [
     path: '/messages',
   },
   {
-    bg: '/user.png',
     path: '/my-profile',
   },
 
