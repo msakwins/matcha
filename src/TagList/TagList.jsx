@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import TagItem from '../TagItem/TagItem';
 import TagListWrapper from'./TagListWrapper';
+import { withRouter } from 'react-router-dom';
 
 
-const TagList = () => {
+const TagList = (props) => {
 
   const [addInterest, setAddInterest] = useState(false);
   
@@ -20,12 +21,14 @@ const TagList = () => {
       <TagItem />
       <TagItem />
     </div>
-    <div className="tag-list__interest-add">
-      <input className="tag-list__interest-input" placeholder="scotch, sleeping ..."></input>
-      <button className="tag-list__interest-button" onClick={handleNewInterest}></button>
+    { props.path === "/my-profile" &&
+      <div className="tag-list__interest-add">
+        <input className="tag-list__interest-input" placeholder="scotch, sleeping ..."></input>
+        <button className="tag-list__interest-button" onClick={handleNewInterest}></button>
     </div>
+    }
   </TagListWrapper>
   )
 }
 
-export default TagList;
+export default withRouter(TagList);

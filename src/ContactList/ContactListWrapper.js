@@ -3,11 +3,12 @@ import styled from 'styled-components';
 
 const ContactListWrapper = styled.div`
   width: 100%;
-  height: 100%; /* WHY */
+  height: 100%;
   background: ${theme.colors.white};
   display: flex;
   flex-direction: column;
-  margin: 0 auto 0;
+  margin: 0 auto;
+  padding: 10px;
 
   @media all and (min-width: 768px) {
     margin: 0 0 0 60px;

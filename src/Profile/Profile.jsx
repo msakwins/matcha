@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import TagList from '../TagList/TagList';
+import SuperLike from '../SuperLike/SuperLike';
 import ProfileWrapper from'./ProfileWrapper';
 
 function Profile(props) {
@@ -24,7 +25,7 @@ function Profile(props) {
   }
 
   return (
-    <ProfileWrapper like={like} photo={openPhoto}>
+    <ProfileWrapper like={like} photo={openPhoto} content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
       <img
         className="profile__user-photo"
         alt="user"
@@ -32,12 +33,7 @@ function Profile(props) {
         onClick={handleOpenPhoto}
       />
       <span className="profile__user-name">Nioki</span>
-      <div className="profile__heart">
-        <button className="profile__fav" onClick={handleLike} like={props.like}/>
-        <span className="particle1"></span>
-        <span className="particle2"></span>
-        <span className="particle3"></span>
-      </div>
+      <SuperLike handleLike={handleLike} like={like} />
       { modal &&
         <div className="profile__love-modal">
           This will use a SUPER-LIKE 

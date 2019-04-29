@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import SignUpWrapper from'./SignUpWrapper';
-import { Input, Button } from '../Styled';
+import { Input, Button, Title } from '../Styled';
 
 const SignUp = () => {
   const [page, setPage] = useState(0);
@@ -25,7 +25,7 @@ const SignUp = () => {
     <SignUpWrapper page={page} lastPage={lastPage}>
     <div className="sign-up__steps">
       <div className="sign-up__first-step">
-        <h2>Create your account</h2>
+        <Title>Create your account</Title>
         <div className="sign-up__fields">
           <Input dark placeholder="First Name" type="text"/>
           <Input dark placeholder="Last Name" type="text"/>
@@ -35,7 +35,7 @@ const SignUp = () => {
       </div>
 
       <div className="sign-up__second-step">
-        <h2>Fill your profile</h2>
+        <Title>Fill your profile</Title>
         <div className="sign-up__fields">
           <div className="sign-up__photo">
             <img alt="" src="/user.png"></img>
@@ -55,7 +55,7 @@ const SignUp = () => {
       </div>
 
       <div className="sign-up__third-step">
-        <h2>What are you looking for ?</h2>
+        <Title>What are you looking for ?</Title>
         <div className="sign-up__fields">
           <Input dark placeholder="Age" type="number"/>
           <Input dark placeholder="Interests" type="text"/>

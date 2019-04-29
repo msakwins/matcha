@@ -86,6 +86,11 @@ const buttonLink = styled(Link)`
   font-family: ${theme.font.primary};
   text-transform: uppercase;
   text-decoration: none;
+  :visited {
+    ${({ light }) => light && `
+      color: ${theme.colors.lightBlue};
+    `};
+  }
   
   ${({ light }) => light && `
     background: ${theme.colors.white};

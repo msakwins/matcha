@@ -20,7 +20,7 @@ const MyProfileWrapper = styled.div`
     
     ${({ photo }) => photo && `
       width: 100%;
-      height: 100%;
+      height: auto;
       border-radius: 0;
       `}
   }

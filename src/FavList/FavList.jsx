@@ -1,10 +1,11 @@
 import React from 'react';
 import FavItem from '../FavItem/FavItem';
 import FavListWrapper from './FavListWrapper';
+import { Title } from '../Styled';
 
 const FavList = () =>
 <FavListWrapper>
-  <span className="fav-list__logo">M33t's</span>
+  <Title>Matches</Title>
   <FavItem />
   <img alt="none" src="/heart.svg"></img>
   <img alt="like" src="/heart-like.svg"></img>

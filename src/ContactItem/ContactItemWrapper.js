@@ -8,7 +8,6 @@ const ContactItemWrapper = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  margin: 0 10px;
   top: 0;
   box-shadow: 4px -4px 0px 0px ${theme.colors.grey};
   border: 1px solid ${theme.colors.grey};

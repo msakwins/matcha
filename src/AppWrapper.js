@@ -15,10 +15,6 @@ const AppWrapper = styled.div`
   
   a {
     color: #4c4c4c;
-
-    :visited {
-      color: #4c4c4c;
-    }
   }
 
 

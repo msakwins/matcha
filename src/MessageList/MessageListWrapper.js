@@ -4,7 +4,6 @@ import styled from 'styled-components';
 const MessageListWrapper = styled.div`
   background: ${theme.colors.white};
   display: flex;
-  margin: 0 10px 10px;
   flex-direction: column;
   overflow: hidden;
   height: 0px;

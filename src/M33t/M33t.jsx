@@ -45,7 +45,6 @@ const M33t = (props) => {
       handleLogging={props.handleLogging}
       isLogged={props.isLogged}
     />} />
-    {console.log(props.handleLogging)}
   </M33tWrapper>
   );
 };

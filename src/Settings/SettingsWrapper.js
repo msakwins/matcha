@@ -4,7 +4,7 @@ import theme from '../theme';
 const SettingsWrapper = styled.div`
   display: flex;
   width: 100%;
-  margin: 60px auto;
+  margin: 0 auto;
   flex-direction: column;
   padding: 10px;
 
