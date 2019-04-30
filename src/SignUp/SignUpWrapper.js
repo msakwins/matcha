@@ -10,6 +10,7 @@ const SignUpWrapper = styled.div`
   width: 100%;
   position: relative;
   white-space: nowrap;
+  padding: 10px;
 
   .sign-up__steps {
     width: 100%;
@@ -18,7 +19,6 @@ const SignUpWrapper = styled.div`
     white-space: nowrap;
     display: flex;
     flex-direction: row;
-    top: 60px;
   }
 
   .sign-up__filled {
@@ -42,6 +42,7 @@ const SignUpWrapper = styled.div`
     height: 80px;
     position: absolute;
     bottom: 0;
+    left: 0;
     background-color: ${theme.colors.white};
     display: flex;
     flex-direction: row;

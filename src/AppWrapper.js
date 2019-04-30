@@ -5,6 +5,11 @@ const AppWrapper = styled.div`
   text-align: center;
   font-family: ${theme.font.primary};
   cursor: default;
+  height: 100vh;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  background-color: ${theme.colors.white};
 
   input {
     font-size: 16px;

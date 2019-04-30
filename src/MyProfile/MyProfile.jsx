@@ -10,47 +10,52 @@ function MyProfile(props) {
       return setOpenPhoto(!openPhoto);
   }
 
+  const {
+    user
+  } = props
+
+
   return (
-    <MyProfileWrapper photo={openPhoto}>
-      <img
-        className="profile__user-photo"
-        alt="user"
-        src="user.png"
-        onClick={handleOpenPhoto}
-      />
-      <div className="profile__info">
-        <span className="profile__name">Nioki</span>
-        <span className="profile__age">24</span>
-        <span className="profile__activity">Freelance cat</span>
-        <img className="my-profile__edit" alt="edit" src="/edit.svg"></img>
+    <MyProfileWrapper id="MyProfile" photo={openPhoto}>
+      <div className="my-profile__user-photo" onClick={handleOpenPhoto}>
+        <img
+          alt="user"
+          src={user.photo1}
+          />
+          { openPhoto &&
+            <div className="my-profile__user-photo__info">
+              <span>{user.firstName}</span>
+              <span>{user.age} y.</span>
+            </div>
+          }
       </div>
-      <TagList />
-      <div className="profile__about">
-        <h2>About me</h2>
-        <p>
-          <span className="profile__about-cat">First Name: </span>
-          <span className="profile__about-text">Nioki</span>
-        </p>
-        <p>
-          <span className="profile__about-cat">Last Name: </span>
-          <span className="profile__about-text">Bouss</span>
-        </p>
-        <p>
-          <span className="profile__about-cat">e-mail: </span>
-          <span className="profile__about-text">nioki@mail.com</span>
-        </p>
-        <p>
-          <span className="profile__about-cat">City: </span>
-          <span className="profile__about-text">San Francisco</span>
-        </p>
-        <p>
-          <span className="profile__about-cat">City: </span>
-          <span className="profile__about-text">San Francisco</span>
-        </p>
-        <p>
-          <span className="profile__about-cat">City: </span>
-          <span className="profile__about-text">San Francisco</span>
-        </p>
+      <div className="my-profile__user-info">
+        <div className="profile__info">
+          <span className="profile__name">{user.firstName}</span>
+          <span className="profile__age">{user.age}y.</span>
+          <span className="profile__activity">{user.activity}</span>
+          <img className="my-profile__edit" alt="edit" src="/edit.svg"></img>
+        </div>
+        <TagList />
+        <div className="profile__about">
+          <h2>About me</h2>
+          <p>
+            <span className="profile__about-cat">First Name: </span>
+            <span className="profile__about-text">{user.firstName}</span>
+          </p>
+          <p>
+            <span className="profile__about-cat">Last Name: </span>
+            <span className="profile__about-text">{user.lastName}</span>
+          </p>
+          <p>
+            <span className="profile__about-cat">e-mail: </span>
+            <span className="profile__about-text">{user.email}</span>
+          </p>
+          <p>
+            <span className="profile__about-cat">City: </span>
+            <span className="profile__about-text">{user.city}</span>
+          </p>
+        </div>
       </div>
     </MyProfileWrapper>
   );

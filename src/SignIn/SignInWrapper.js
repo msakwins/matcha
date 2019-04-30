@@ -5,7 +5,6 @@ import styled from 'styled-components';
 const SignInWrapper = styled.div`
   width: 100%;
   height: calc(100vh - 60px);
-  margin: 60px 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;

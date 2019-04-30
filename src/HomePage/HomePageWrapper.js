@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import theme from '../theme';
 
 const HomePageWrapper = styled.div`
   width: 100%;
@@ -7,11 +8,7 @@ const HomePageWrapper = styled.div`
   padding: 0 20px;
   margin: 0 auto;
   padding: 10px;
-
-  @media all and (min-width: 768px) {
-    margin: 0 0 0 60px;
-  }
-  
+  color: ${theme.colors.darkGrey};
   img {
     height: 50px;
   }

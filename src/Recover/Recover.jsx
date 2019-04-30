@@ -1,8 +1,13 @@
 import React from 'react';
+import RecoverWrapper from './RecoverWrapper';
+import { Title, Input, Button } from '../Styled';
 
 const Recover = () =>
-  <div>
-    U dumb
-  </div>
+  <RecoverWrapper>
+    <Title>Reset your password</Title>
+    <Input placeholder="New password"></Input>
+    <Input placeholder="Password confirmation"></Input>
+    <Button light grey>Reset</Button>
+  </RecoverWrapper>
 
 export default Recover;

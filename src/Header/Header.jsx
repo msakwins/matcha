@@ -3,7 +3,7 @@ import HeaderWrapper from'./HeaderWrapper';
 import { Link } from 'react-router-dom';
 
 const Header = () =>
-  <HeaderWrapper>
+  <HeaderWrapper id="HeaderWrapper">
     <Link to="/" className="logo">
       M33t
     </Link>

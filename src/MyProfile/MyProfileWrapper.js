@@ -9,20 +9,52 @@ const MyProfileWrapper = styled.div`
   color: ${theme.colors.darkGrey};
   padding: 10px 10px 0;
   width: 100%;
+  height: 100%;
+  position: relative;
 
-  @media all and (min-width: 768px) {
-    margin: 0 0 0 60px;
+  .my-profile__user-photo {
+    
+    img {
+      width: 160px;
+      border-radius: 100%;
+      
+      ${({ photo }) => photo && `
+        width: auto;
+        padding: 10px;
+        max-width: 1000px;
+        height: auto;
+        margin: auto;
+        border-radius: 0;
+      `}
+    }
+
+    ${({ photo }) => photo && `
+      height: 100%;
+      width: 100%;
+      top: 0;
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.85);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+    `}
+
+    .my-profile__user-photo__info {
+      position: absolute;
+      bottom: 0;
+      height: 60px;
+      width: 100%;
+      border-top: 1px solid ${theme.colors.mediumGrey};
+      color: ${theme.colors.grey};
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+    }
   }
 
-  img {
-    width: 160px;
-    border-radius: 100%;
-    
-    ${({ photo }) => photo && `
-      width: 100%;
-      height: auto;
-      border-radius: 0;
-      `}
+  .my-profile__user-info {
+    position: relative;
   }
 
   .my-profile__edit {
@@ -75,21 +107,6 @@ const MyProfileWrapper = styled.div`
     .profile__about-cat {
       font-weight: bold;
     }
-  }
-
-  .profile__fav {
-    height: 40px;
-    width: 40px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 0 0 10px;
-
-    ${({ like }) => like === 1 && `background-image: url('/heart-like.svg');`}
-    ${({ like }) => like === 0 && `background-image: url('/heart.svg');`}
-    ${({ like }) => like === 2 && `background-image: url('/heart-love.svg');`}
   }
 `;
 

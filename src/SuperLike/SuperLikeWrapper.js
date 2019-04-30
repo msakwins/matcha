@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 import theme from '../theme';
 
-const deg= 20;
-
 const SuperLikeWrapper = styled.div`
   height: 60px;
   width: 60px;

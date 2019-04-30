@@ -16,7 +16,7 @@ const Button = styled.button`
   width: 180px;
   outline: none;
   padding: 0 10px;
-  margin: 10px 5px;
+  margin: 10px auto;
   font-size: 14px;
   color: ${theme.colors.white};
   transition: all 0.4s ease-out;
@@ -78,7 +78,7 @@ const buttonLink = styled(Link)`
   width: 180px;
   outline: none;
   padding: 0 10px;
-  margin: 10px 5px;
+  margin: 10px auto;
   font-size: 14px;
   color: ${theme.colors.white};
   transition: all 0.4s ease-out;

@@ -27,10 +27,10 @@ const SignUp = () => {
       <div className="sign-up__first-step">
         <Title>Create your account</Title>
         <div className="sign-up__fields">
-          <Input dark placeholder="First Name" type="text"/>
-          <Input dark placeholder="Last Name" type="text"/>
-          <Input dark placeholder="E-mail" type="text"/>
-          <Input dark placeholder="Password" type="text"/>
+          <Input placeholder="First Name" type="text"/>
+          <Input placeholder="Last Name" type="text"/>
+          <Input placeholder="E-mail" type="text"/>
+          <Input placeholder="Password" type="text"/>
         </div>
       </div>
 
@@ -39,26 +39,26 @@ const SignUp = () => {
         <div className="sign-up__fields">
           <div className="sign-up__photo">
             <img alt="" src="/user.png"></img>
-            <Input dark placeholder="../users/marion"></Input>
+            <Input placeholder="../users/marion"></Input>
             <Button small bg="/photo.svg" nude/>
           </div>
           <span className="sign-up__filled">Marion</span>
           <span className="sign-up__filled">Skw</span>
           <span className="sign-up__filled">marion.s@mail.com</span>
-          <Input dark placeholder="Age" type="number"/>
-          <Input dark placeholder="Activity" type="text"/>
-          <Input dark placeholder="Interests" type="text"/>
-          <Input dark placeholder="Interests" type="text"/>
-          <Input dark placeholder="Interests" type="text"/>
-          <Input dark placeholder="Interests" type="text"/>
+          <Input placeholder="Age" type="number"/>
+          <Input placeholder="Activity" type="text"/>
+          <Input placeholder="Interests" type="text"/>
+          <Input placeholder="Interests" type="text"/>
+          <Input placeholder="Interests" type="text"/>
+          <Input placeholder="Interests" type="text"/>
         </div>
       </div>
 
       <div className="sign-up__third-step">
         <Title>What are you looking for ?</Title>
         <div className="sign-up__fields">
-          <Input dark placeholder="Age" type="number"/>
-          <Input dark placeholder="Interests" type="text"/>
+          <Input placeholder="Age" type="number"/>
+          <Input placeholder="Interests" type="text"/>
         </div>
       </div>
 

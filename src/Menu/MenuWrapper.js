@@ -12,18 +12,14 @@ const MenuWrapper = styled.div`
   border-top: 1px solid ${theme.colors.lightBlue};
   justify-content: center;
   align-items: center;
+  max-width: 1024px;
 
   @media all and (min-width: 768px) {
-    top: 60px;
-    height: 100%;
-    width: 60px;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    top: 61px;
+    width: 100%;
     padding: 20px 0;
     position: fixed;
     border: none;
-    border-right: 2px solid ${theme.colors.grey};
   } 
 
   .menu__search-input {

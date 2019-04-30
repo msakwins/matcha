@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import M33t from './M33t/M33t';
+import Loading from './Loading/Loading';
 
 import Header from './Header/Header';
 
@@ -35,6 +36,7 @@ const theme = {
 function App() {
   const [isLogged, setIsLogged] = useState(false);
   const [changeTheme, setChangeTheme] = useState(1);
+  const [loading, setLoading] = useState(false);
 
   function handleLogging() {
     setIsLogged(!isLogged);
@@ -48,9 +50,12 @@ function App() {
   return (
     <Router>
       <ThemeProvider theme={theme[changeTheme]}>
-        <AppWrapper>
+        <AppWrapper id="AppWrapper">
           <M33t handleLogging={handleLogging} isLogged={isLogged} />
           <Header />
+          {loading &&
+            <Loading />
+          }
         </AppWrapper>
       </ThemeProvider>
     </Router>

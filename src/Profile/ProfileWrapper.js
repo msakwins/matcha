@@ -1,8 +1,6 @@
 import theme from '../theme.js';
 import styled from 'styled-components';
 
-const deg = 20;
-
 const ProfileWrapper = styled.div`
   display: flex;
   margin: 0 auto;

@@ -16,7 +16,6 @@ function Settings({ handleTheme, handleLogging, isLogged }) {
         <BLink light onClick={handleLogging} to="/register">SIGN UP</BLink>
         <Button onClick={handleLogging}>LOG OUT</Button>
       </div>
-      {console.log(handleLogging)}
       <div className="settings__palette">
         <div className="settings__my-palette"></div>
         <div className="settings__my-palette"></div>

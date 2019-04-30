@@ -10,10 +10,6 @@ const ContactListWrapper = styled.div`
   margin: 0 auto;
   padding: 10px;
 
-  @media all and (min-width: 768px) {
-    margin: 0 0 0 60px;
-  }
-
   .contact-list__title {
     position: absolute;
     text-align: center;

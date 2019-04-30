@@ -3,10 +3,10 @@ import theme from '../theme';
 
 const Input = styled.input`
   width: 180px;
-  color: ${theme.colors.black};
   border: none;
-  border-bottom: 1px solid ${theme.colors.mediumGrey};
   background: transparent;
+  color: ${theme.colors.black};
+  border-bottom: 1px solid ${theme.colors.black};
   height: 35px;
   min-height: 35px;
   outline: none;
@@ -26,12 +26,6 @@ const Input = styled.input`
     color: ${theme.colors.mediumGrey};
     font-size: 16px;
   }
-
-  ${({ dark }) => dark && `
-  color: ${theme.colors.black};
-    border-color: ${theme.colors.black};
-
-  `};
 `;
 
 export default Input;
