@@ -1,45 +1,57 @@
-import React from 'react';
+import React, { useState } from 'react';
 import MenuWrapper from'./MenuWrapper';
 // import SubMenu from '../SubMenu/SubMenu';
 import { withRouter } from 'react-router-dom';
-import MenuItem from '../MenuItem/MenuItem';
 
-const menuItems = [
-  {
-    bg: '/settings.svg',
-    selected: '/settings-selected.svg',
-    path: '/settings',
-  },
-  {
-    bg: '/heart.svg',
-    selected: '/heart-selected.svg',
-    path: '/favs',
-  },
-  {
-    path: '/',
-  },
-  {
-    bg: '/chat.svg',
-    selected: '/chat-selected.svg',
-    path: '/messages',
-  },
-  {
-    path: '/my-profile',
-  },
+import { Button, LinkSettings, LinkFavs, LinkMessages, LinkProfile } from '../Styled';
 
-];
+const Menu = (props) => {
+  const {
+    openSearch,
+    location: { pathname },
+  } = props;
+  
+  const [openMenu, setOpenMenu] = useState(false);
+  const [menuClass, setMenuClass] = useState(null);
 
-const Menu = ({ handleSearch, openSearch, url }) =>
-{
+  function handleMenu() {
+    setMenuClass(openMenu === true ? "-close" : "-open");
+    setOpenMenu(!openMenu);
+  }
+
+  function handleCloseMenu() {
+    if (openMenu === true) {
+      setOpenMenu(false);
+      setMenuClass("-close");
+
+    }
+    else {
+      setOpenMenu(openMenu);
+    }
+  }
+
+  console.log(props)
   return (
     <MenuWrapper
-      search={openSearch}
-      menuItem={menuItems}
+    id="Menu"
+    search={openSearch}
+    open={openMenu}
+    menuClass={menuClass}
     >
       {/*<button className="menu__button-search" onClick={props.action} /> */}
-      {menuItems.map((menuItem, index) => (
-        <MenuItem menuItem={menuItem} key={index} url={url}/>
-        ))}
+    <LinkSettings onClick={handleCloseMenu} menuClass={menuClass} selected={pathname === "/settings"} to="/settings">
+      <span>Settings</span>
+    </LinkSettings>
+    <LinkFavs onClick={handleCloseMenu} menuClass={menuClass} selected={pathname === "/favs"} to="/favs">
+      <span>Matches</span>
+    </LinkFavs>
+    <LinkMessages onClick={handleCloseMenu} menuClass={menuClass} selected={pathname === "/messages"} to ="/messages">
+      <span>Messages</span>
+    </LinkMessages>
+    <LinkProfile onClick={handleCloseMenu} menuClass={menuClass} selected={pathname === "/my-profile"} to ="/my-profile">
+      <span>My profile</span>
+    </LinkProfile>
+    <div onClick={handleMenu} className="menu__close-button">...</div>
     </MenuWrapper>
   )
 }

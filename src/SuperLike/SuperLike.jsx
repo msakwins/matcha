@@ -1,8 +1,7 @@
 import React from 'react';
 import SuperLikeWrapper from './SuperLikeWrapper';
 
-
-const SuperLike = ({ handleLike, like}) =>
+const SuperLike = ({ handleLike, like }) =>
   <SuperLikeWrapper like={like}>
     <span className="particle particle1"></span>
     <span className="particle particle2"></span>

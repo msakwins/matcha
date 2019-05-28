@@ -14,14 +14,70 @@ const MenuWrapper = styled.div`
   align-items: center;
   max-width: 1024px;
 
+  span {
+    display: none;
+  }
+
   @media all and (min-width: 768px) {
-    top: 61px;
-    width: 100%;
-    padding: 20px 0;
-    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 60px;
+    padding: 0;
     border: none;
+    position: absolute;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+    box-shadow: 0 0 8px 0px ${theme.colors.grey};
+    overflow: hidden;
+    
+    ${({ menuClass }) => menuClass === "-close" && `
+      transition: width 0.4s;
+      width: 60px;
+    `}
+    
+    ${({ menuClass }) => menuClass === "-open" && `
+      transition: width 0.4s;
+      width: 200px;
+    `}
+
+    span {
+      position: absolute;
+      overflow: hidden;
+      white-space: nowrap;
+      left: 50px;
+      display: block;
+      height: 60px;
+      width: 140px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 10px 10px 10px 20px;
+    }
   } 
 
+  .menu__close-button {
+    border-bottom: 1px solid ${theme.colors.grey};
+    padding: 10px;
+    width: 60px;
+    height: 50px;
+    display: none;
+
+    @media all and (min-width: 768px) {
+      display: block;
+      
+      ${({ menuClass }) => menuClass === "-close" && `
+        transition: width 0.4s;
+        width: 60px;
+      `}
+      
+      ${({ menuClass }) => menuClass === "-open" && `
+        transition: width 0.4s;
+        width: 200px;
+      `}
+    }
+  }
+  
   .menu__search-input {
     width: 0px;
 

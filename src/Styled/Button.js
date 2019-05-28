@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import theme from '../theme';
 
 const Button = styled.button`
@@ -10,41 +9,30 @@ const Button = styled.button`
   align-items: center;
   cursor: pointer;
   font-family: ${theme.font.primary};
-  border: 1px solid ${theme.colors.lightBlue};
-  background: ${theme.colors.lightBlue};
   height: 40px;
   width: 180px;
   outline: none;
   padding: 0 10px;
   margin: 10px auto;
   font-size: 14px;
-  color: ${theme.colors.white};
-  transition: all 0.4s ease-out;
-  box-shadow: inset 0 0 0 0 ${theme.colors.lightBlue};
   text-transform: uppercase;
+  font-weight: 600;
+  color: ${theme.colors.white};
+  border-style: solid;
+  border-width: 1px;
+  letter-spacing: 0.05rem;
+  
+  img {
+    height: 20px;
+    width: 20px;
+    margin: 0 5px 0 0;
+  }
 
-  ${({ hover }) => hover && `
-    :hover {
-      @media all and (min-width: 768px) {
-        box-shadow: inset 200px 0 0 0 ${theme.colors.lightBlue};
-        color: ${theme.colors.black};
-        border-color: ${theme.colors.lightBlue};
-        
-        ${({ light }) => light && `
-        box-shadow: unset;
-        border: 1px solid ${theme.colors.black};
-        color: ${theme.colors.black};
-        `}
-      }
-    }
-  `};
-
-  ${({ light }) => light && `
-    box-shadow: inset 0 0 0 0 ${theme.colors.black};
-    border: 1px solid ${theme.colors.black};
-    background: ${theme.colors.white};
-    color: ${theme.colors.black};
-  `};
+  span {
+    font-family: ${theme.font.logo};
+    text-transform: none;
+    font-size: 18px;
+  }
 
   ${({ small }) => small && `
     width: 40px;
@@ -52,56 +40,67 @@ const Button = styled.button`
     font-size: 14px;
   `};
 
-  ${({ bg }) => bg && `
-    background-image: url(${bg});
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 20px;
+  ${({ grey }) => grey && `
+    background-color: ${theme.colors.darkGrey};
+    border-color: ${theme.colors.darkGrey};
   `};
 
-  ${({ nude }) => nude && `
-    background-color: transparent;
-    background-size: 30px;
-  `}
-`;
-
-const buttonLink = styled(Link)`
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  border: none;
-  border: 1px solid ${theme.colors.lightBlue};
-  background: ${theme.colors.lightBlue};
-  height: 40px;
-  width: 180px;
-  outline: none;
-  padding: 0 10px;
-  margin: 10px auto;
-  font-size: 14px;
-  color: ${theme.colors.white};
-  transition: all 0.4s ease-out;
-  box-shadow: inset 0 0 0 0 ${theme.colors.lightBlue};
-  font-family: ${theme.font.primary};
-  text-transform: uppercase;
-  text-decoration: none;
-  :visited {
-    ${({ light }) => light && `
-      color: ${theme.colors.lightBlue};
-    `};
-  }
-  
-  ${({ light }) => light && `
-    background: ${theme.colors.white};
-    border: 1px solid ${theme.colors.lightBlue};
-    color: ${theme.colors.lightBlue};
-  `};
-
-  ${({ light, grey }) => light && grey && `
+  ${({ greyBorder }) => greyBorder && `
     border: 1px solid ${theme.colors.darkGrey};
     color: ${theme.colors.darkGrey};
+    background-color: ${theme.colors.white};
+  `};
+
+  ${({ pink }) => pink && `
+    background-color: ${theme.colors.pink};
+    border-color: ${theme.colors.pink};
+    letter-spacing: 0.05rem;
+    text-shadow: 2px 0 ${theme.colors.darkPink};
+  `};
+
+  ${({ pinkBorder }) => pinkBorder && `
+    border: 1px solid ${theme.colors.pink};
+    color: ${theme.colors.pink};
+    background-color: ${theme.colors.white};
+  `};
+
+  ${({ darkPink }) => darkPink && `
+    background-color: ${theme.colors.darkPink};
+    border-color: ${theme.colors.darkPink};
+    color: ${theme.colors.pink};
+  `};
+
+  ${({ darkPinkBorder }) => darkPinkBorder && `
+    background-color: ${theme.colors.white};
+    border-color: ${theme.colors.darkPink};
+    color: ${theme.colors.darkPink};
+  `};
+
+  ${({ blue }) => blue && `
+    border-color: ${theme.colors.lightBlue};
+    background-color: ${theme.colors.lightBlue};
+    letter-spacing: 0.05rem;
+    text-shadow: 2px 0 ${theme.colors.black}
+  `};
+
+  ${({ blueBorder }) => blueBorder && `
+    border-color: ${theme.colors.lightBlue};
+    color: ${theme.colors.lightBlue};
+    background-color: ${theme.colors.white};
+  `};
+
+  ${({ violetBorder }) => violetBorder && `
+    color: ${theme.colors.violet};
+    background-color: ${theme.colors.white};
+    border-color: ${theme.colors.violet};
+  `};
+
+  ${({ img }) => img && `
+    background-image: url(${img});
+    background-size: 20px;
+    background-position: 10px center;
+    background-repeat: no-repeat;
   `};
 `;
 
-export { Button, buttonLink };
+export { Button };

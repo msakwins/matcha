@@ -14,14 +14,12 @@ const HeaderWrapper = styled.div`
   font-family: ${theme.font.logo};
   position: absolute;
   top: 0;
-  border-color: ${theme.colors.grey};
-  border-style: solid;
-  border-width: 0 0 1px 0;
   max-width: 1024px;
   box-sizing: border-box;
+  border-bottom: 1px solid ${theme.colors.grey};
 
   @media all and (min-width: 768px) {
-    border: none;
+    position: fixed;
   }
 
   .logo {

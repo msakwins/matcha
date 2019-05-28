@@ -7,7 +7,6 @@ const MyProfileWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   color: ${theme.colors.darkGrey};
-  padding: 10px 10px 0;
   width: 100%;
   height: 100%;
   position: relative;
@@ -67,47 +66,25 @@ const MyProfileWrapper = styled.div`
     flex-direction: column;
     margin: 10px 0;
 
-    .profile__name {
+    .my-profile__text-bold {
       font-weight: bold;
       letter-spacing: 0.05rem;
       color: ${theme.colors.black};
     }
   
-    .profile__age {
+    .my-profile__text-color {
       font-size: 14px;
       color: ${theme.colors.violet};
       font-weight: bold;
     }
   
-    .profile__activity {
+    .my-profile__text {
       font-size: 14px;
       color: ${theme.colors.black};
       font-weight: bold;
     }
   }
 
-  .profile__about {
-    text-align: left;
-    margin: 10px 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    font-size: 14px;
-    
-    h2 {
-      text-decoration: underline;
-      font-size: 16px;
-      margin: 0 0 5px;
-    }
-  }
-
-  p {
-    margin: 0 0 4px;
-
-    .profile__about-cat {
-      font-weight: bold;
-    }
-  }
 `;
 
 export default MyProfileWrapper;

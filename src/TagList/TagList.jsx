@@ -15,7 +15,7 @@ const TagList = (props) => {
       return setAddInterest(!addInterest);
   }
   return (
-    <TagListWrapper addInterest={addInterest}>
+    <TagListWrapper id="TagList" addInterest={addInterest}>
     <div className="tag-list">
       <TagItem />
       <TagItem />

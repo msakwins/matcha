@@ -9,15 +9,9 @@ const ProfileWrapper = styled.div`
   align-items: center;
   height: 100%;
 
-  img {
+  .profile__user-photo {
     width: 160px;
     border-radius: 100%;
-
-    ${({ photo }) => photo && `
-      width: 100%;
-      height: auto;
-      border-radius: 0;
-    `}
   }
 
   .profile__user-name {

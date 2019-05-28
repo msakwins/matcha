@@ -37,6 +37,8 @@ function App() {
   const [isLogged, setIsLogged] = useState(false);
   const [changeTheme, setChangeTheme] = useState(1);
   const [loading, setLoading] = useState(false);
+  const [like, setLike] = useState(0);
+  const [modal, setModal] = useState(false);
 
   function handleLogging() {
     setIsLogged(!isLogged);
@@ -46,12 +48,30 @@ function App() {
     setChangeTheme(themeNumber);
   }
 
+  function handleModal() {
+    setModal(false);
+    setLike(2);
+  }
+
+  function handleLike() {
+    if (like === 0)
+      return setLike(1);
+    else if (like === 1)
+      return setModal(true);
+  }
 
   return (
     <Router>
       <ThemeProvider theme={theme[changeTheme]}>
         <AppWrapper id="AppWrapper">
-          <M33t handleLogging={handleLogging} isLogged={isLogged} />
+          <M33t
+            handleLogging={handleLogging}
+            isLogged={isLogged}
+            handleModal={handleModal}
+            handleLike={handleLike}
+            like={like}
+            modal={modal}
+          />
           <Header />
           {loading &&
             <Loading />

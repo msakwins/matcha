@@ -12,6 +12,9 @@ const ContactItemWrapper = styled.div`
   box-shadow: 4px -4px 0px 0px ${theme.colors.grey};
   border: 1px solid ${theme.colors.grey};
   cursor: pointer;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
   border-bottom: ${({ view, preview }) => (view !== 1 && preview !== 1) ? `1px solid ${theme.colors.grey}` : 'none'};
 
   .contact-item__message-list {

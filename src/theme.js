@@ -9,8 +9,10 @@ const theme = {
     lightestBlue: 'rgba(168, 208, 230, 0.3)',
 
     violet: '#B39BC8',
+    darkViolet: '#460084',
     pink: '#FFD3EA',
     darkPink: '#FF1E5A',
+    blackPink: '#7a0c29',
 
     lightGrey: '#f4f4f4',
     grey: '#e8e8e8',

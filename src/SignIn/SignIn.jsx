@@ -1,6 +1,7 @@
 import React from 'react';
 import SignInWrapper from './SignInWrapper';
-import { Input, Button, Link, BLink, Title } from '../Styled';
+import { Link } from 'react-router-dom';
+import { Input, Button, Title } from '../Styled';
 
 function SignIn({ handleLogging, isLogged }) {
   return (
@@ -12,10 +13,10 @@ function SignIn({ handleLogging, isLogged }) {
         type="text"
         />
       <Link className="sign-in__forgot-password" to="/recover">Forgot your password?</Link>
-      <Button onClick={handleLogging}>Login</Button>
+      <Button greyBorder onClick={handleLogging}>Login</Button>
       <div className="signin__signup">
         <span>You don't have an account yet? </span>
-        <BLink light="light" to="/register">Register</BLink>
+        <Button grey as={Link} to="/register">Register</Button>
       </div>
     </SignInWrapper>
   );

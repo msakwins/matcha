@@ -16,7 +16,14 @@ const M33t = (props) => {
 
   else return (
     <M33tWrapper id="M33tWrapper">
-      <Connected isLogged={props.isLogged} handleLogging={props.handleLogging} />
+      <Connected
+        isLogged={props.isLogged}
+        handleLogging={props.handleLogging}
+        handleLike={props.handleLike}
+        handleModal={props.handleModal}
+        like={props.like}
+        modal={props.modal}
+      />
       <Menu url={props.location.pathname} />
     </M33tWrapper>
   );

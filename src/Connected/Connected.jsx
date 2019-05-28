@@ -8,27 +8,45 @@ import MyProfile from '../MyProfile/MyProfile';
 import Settings from '../Settings/Settings';
 import ContactList from '../ContactList/ContactList';
 import HomePage from '../HomePage/HomePage';
-import Slider from '../Slider/Slider';
+import BuySuperLikes from '../BuySuperLikes/BuySuperLikes';
+import MyInformations from '../MyInformations/MyInformations.jsx';
+import About from '../About/About';
 import user from '../User';
 
 const Connected = (props) =>
 <ConnectedWrapper id="Connected" isLogged={props.isLogged}>
   <Route exact path="/" component={HomePage} />
-  <Route path="/favs" component={FavList} />
+  <Route path="/favs" render={() =>
+    <FavList user={user}
+      like={props.like}
+    />
+  } />
   <Route path="/messages" component={ContactList} />
-  <Route path="/profile" component={Profile} />
+  <Route path="/superlikes" component={BuySuperLikes} />
+  <Route path="/about" component={About} />
+  <Route path="/profile" render={() => 
+    <Profile
+      handleModal={props.handleModal}
+      handleLike={props.handleLike}
+      like={props.like}
+      modal={props.modal}
+    />
+  } />
   <Route path="/messageid" component={MessageList} />
-  <Route path="/slide" component={Slider} />
+  <Route path="/settings/my-infos" render={() =>
+    <MyInformations user={user} />
+  } />
   <Route path="/my-profile" render={() =>
     <MyProfile user={user} />
-  }/>
-  <Route path="/settings" render={() =>
+  } />
+  <Route exact path="/settings" render={() =>
     <Settings
+      user={user}
       handleTheme={props.handleTheme}
       handleLogging={props.handleLogging}
       isLogged={props.isLogged}
     />
-  }/>
+  } />
 </ConnectedWrapper>
   
 export default withRouter(Connected);

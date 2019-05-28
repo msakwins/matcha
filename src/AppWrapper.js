@@ -5,7 +5,6 @@ const AppWrapper = styled.div`
   text-align: center;
   font-family: ${theme.font.primary};
   cursor: default;
-  height: 100vh;
   width: 100%;
   max-width: 1024px;
   margin: 0 auto;
@@ -18,11 +17,6 @@ const AppWrapper = styled.div`
     }
   }
   
-  a {
-    color: #4c4c4c;
-  }
-
-
   .change-theme {
     height: 50px;
     width: 50px;
