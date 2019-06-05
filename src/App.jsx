@@ -39,6 +39,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [like, setLike] = useState(0);
   const [modal, setModal] = useState(false);
+  const [rate, setRate] = useState(0);
 
   function handleLogging() {
     setIsLogged(!isLogged);
@@ -53,6 +54,10 @@ function App() {
     setLike(2);
   }
 
+  function handleRate(rate) {
+    setRate(rate);
+  }
+
   function handleLike() {
     if (like === 0)
       return setLike(1);
@@ -60,6 +65,7 @@ function App() {
       return setModal(true);
   }
 
+  console.log('rate', rate)
   return (
     <Router>
       <ThemeProvider theme={theme[changeTheme]}>
@@ -71,6 +77,8 @@ function App() {
             handleLike={handleLike}
             like={like}
             modal={modal}
+            handleRate={handleRate}
+            rate={rate}
           />
           <Header />
           {loading &&

@@ -5,7 +5,7 @@ import { Title, Button } from '../Styled';
 function HomePage(props) {
 
   return (
-    <HomePageWrapper>
+    <HomePageWrapper id="HomePage">
       <Title>Welcome</Title>
       <span>Our very simple algorithm will find someone who matches the interests you filled !</span>
       <br />

@@ -12,6 +12,9 @@ import BuySuperLikes from '../BuySuperLikes/BuySuperLikes';
 import MyInformations from '../MyInformations/MyInformations.jsx';
 import About from '../About/About';
 import user from '../User';
+import me from '../Me';
+import Notification from '../Notification/Notification';
+import Rate from '../Rate/Rate';
 
 const Connected = (props) =>
 <ConnectedWrapper id="Connected" isLogged={props.isLogged}>
@@ -30,14 +33,19 @@ const Connected = (props) =>
       handleLike={props.handleLike}
       like={props.like}
       modal={props.modal}
+      user={user}
     />
   } />
   <Route path="/messageid" component={MessageList} />
+  <Route path="/rate" render={() =>
+    <Rate handleRate={props.handleRate} rate={props.rate} /> 
+  }/>
+
   <Route path="/settings/my-infos" render={() =>
     <MyInformations user={user} />
   } />
   <Route path="/my-profile" render={() =>
-    <MyProfile user={user} />
+    <MyProfile me={me} />
   } />
   <Route exact path="/settings" render={() =>
     <Settings
@@ -47,6 +55,7 @@ const Connected = (props) =>
       isLogged={props.isLogged}
     />
   } />
+  <Notification user={user} notification={true}/>
 </ConnectedWrapper>
   
 export default withRouter(Connected);

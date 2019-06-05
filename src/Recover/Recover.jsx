@@ -7,7 +7,7 @@ const Recover = () =>
     <Title>Reset your password</Title>
     <Input placeholder="New password"></Input>
     <Input placeholder="Password confirmation"></Input>
-    <Button light grey>Reset</Button>
+    <Button>Reset</Button>
   </RecoverWrapper>
 
 export default Recover;

@@ -12,7 +12,7 @@ const Menu = (props) => {
   } = props;
   
   const [openMenu, setOpenMenu] = useState(false);
-  const [menuClass, setMenuClass] = useState(null);
+  const [menuclass, setMenuClass] = useState(null);
 
   function handleMenu() {
     setMenuClass(openMenu === true ? "-close" : "-open");
@@ -30,25 +30,24 @@ const Menu = (props) => {
     }
   }
 
-  console.log(props)
   return (
     <MenuWrapper
     id="Menu"
     search={openSearch}
     open={openMenu}
-    menuClass={menuClass}
+    menuclass={menuclass}
     >
       {/*<button className="menu__button-search" onClick={props.action} /> */}
-    <LinkSettings onClick={handleCloseMenu} menuClass={menuClass} selected={pathname === "/settings"} to="/settings">
+    <LinkSettings onClick={handleCloseMenu} menuclass={menuclass} selected={pathname === "/settings"} to="/settings">
       <span>Settings</span>
     </LinkSettings>
-    <LinkFavs onClick={handleCloseMenu} menuClass={menuClass} selected={pathname === "/favs"} to="/favs">
+    <LinkFavs onClick={handleCloseMenu} menuclass={menuclass} selected={pathname === "/favs"} to="/favs">
       <span>Matches</span>
     </LinkFavs>
-    <LinkMessages onClick={handleCloseMenu} menuClass={menuClass} selected={pathname === "/messages"} to ="/messages">
+    <LinkMessages onClick={handleCloseMenu} menuclass={menuclass} selected={pathname === "/messages"} to ="/messages">
       <span>Messages</span>
     </LinkMessages>
-    <LinkProfile onClick={handleCloseMenu} menuClass={menuClass} selected={pathname === "/my-profile"} to ="/my-profile">
+    <LinkProfile onClick={handleCloseMenu} menuclass={menuclass} selected={pathname === "/my-profile"} to ="/my-profile">
       <span>My profile</span>
     </LinkProfile>
     <div onClick={handleMenu} className="menu__close-button">...</div>

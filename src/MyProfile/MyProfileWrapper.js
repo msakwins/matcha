@@ -1,7 +1,6 @@
 import theme from '../theme.js';
 import styled from 'styled-components';
 
-
 const MyProfileWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -10,11 +9,13 @@ const MyProfileWrapper = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
+  padding: 10px;
 
   .my-profile__user-photo {
     
     img {
-      width: 160px;
+      max-width: 160px;
+      max-height: 200px;
       border-radius: 100%;
       
       ${({ photo }) => photo && `

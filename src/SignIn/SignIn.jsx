@@ -16,7 +16,7 @@ function SignIn({ handleLogging, isLogged }) {
       <Button greyBorder onClick={handleLogging}>Login</Button>
       <div className="signin__signup">
         <span>You don't have an account yet? </span>
-        <Button grey as={Link} to="/register">Register</Button>
+        <Button as={Link} to="/register">Register</Button>
       </div>
     </SignInWrapper>
   );

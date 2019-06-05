@@ -34,12 +34,12 @@ const LinkMenu = styled(Link)`
     margin: 0;
     position: relative;
 
-    ${({ menuClass }) => menuClass === "-open" && `
+    ${({ menuclass }) => menuclass === "-open" && `
       transition: width 0.4s;
       width: 200px;
     `};
 
-    ${({ menuClass }) => menuClass === "-close" && `
+    ${({ menuclass }) => menuclass === "-close" && `
       transition: width 0.4s;
       width: 60px;
     `};

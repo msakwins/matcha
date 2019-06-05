@@ -1,8 +1,8 @@
 import React from 'react';
-import SuperLikeWrapper from './SuperLikeWrapper';
+import LikeWrapper from './LikeWrapper';
 
-const SuperLike = ({ handleLike, like }) =>
-  <SuperLikeWrapper like={like}>
+const Like = ({ handleLike, like }) =>
+  <LikeWrapper like={like}>
     <span className="particle particle1"></span>
     <span className="particle particle2"></span>
     <span className="particle particle3"></span>
@@ -12,6 +12,6 @@ const SuperLike = ({ handleLike, like }) =>
     <span className="particle particle7"></span>
     <span className="particle particle8"></span>
     <button className="profile__fav" onClick={handleLike} like={like}/>
-  </SuperLikeWrapper>
+  </LikeWrapper>
 
-export default SuperLike;
+export default Like;

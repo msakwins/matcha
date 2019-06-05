@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import theme from '../theme';
 
-const SuperLikeWrapper = styled.div`
+const LikeWrapper = styled.div`
   height: 60px;
   width: 60px;
   display: flex;
@@ -322,4 +322,4 @@ const SuperLikeWrapper = styled.div`
   }
 `;
 
-export default SuperLikeWrapper;
+export default LikeWrapper;

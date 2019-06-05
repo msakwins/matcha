@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import TagList from '../TagList/TagList';
-import SuperLike from '../SuperLike/SuperLike';
+import Like from '../Like/Like';
 import ProfileWrapper from'./ProfileWrapper';
 import Slider from '../Slider/Slider';
+import Popularity from '../Popularity/Popularity';
 
 function Profile(props) {
   const [openPhoto, setOpenPhoto] = useState(false);
@@ -11,8 +12,13 @@ function Profile(props) {
       return setOpenPhoto(!openPhoto);
   }
 
+  const {
+    user
+  } = props;
+
   return (
     <ProfileWrapper like={props.like} photo={openPhoto} content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+      <Popularity popularity={user.popularity} />
       <img
         className="profile__user-photo"
         alt="user"
@@ -21,7 +27,7 @@ function Profile(props) {
       />
 
       <span className="profile__user-name">Nioki</span>
-      <SuperLike handleLike={props.handleLike} like={props.like} />
+      <Like handleLike={props.handleLike} like={props.like} />
       { props.modal &&
         <div className="profile__love-modal">
           This will use a SUPER-LIKE 
@@ -32,7 +38,6 @@ function Profile(props) {
       { openPhoto &&
         <Slider handleOpenPhoto={handleOpenPhoto} />
       }
-      {console.log(props)}
     </ProfileWrapper>
   );
 }

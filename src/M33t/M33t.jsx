@@ -5,24 +5,38 @@ import Connected from '../Connected/Connected';
 import Menu from '../Menu/Menu';
 import { withRouter } from 'react-router-dom';
 
-const M33t = (props) => {
-  if (!props.isLogged) {
+function M33t(props) {
+
+  const {
+    isLogged,
+    handleLogging,
+    like,
+    handleLike,
+    modal,
+    handleModal,
+    rate,
+    handleRate,
+  } = props;
+
+  if (!isLogged) {
     return (
-    <M33tWrapper id="M33tWrapper">
-      <NotConnected isLogged={props.isLogged} handleLogging={props.handleLogging} />
+    <M33tWrapper id="M33t">
+      <NotConnected isLogged={isLogged} handleLogging={handleLogging} />
     </M33tWrapper>
     );
   }
 
   else return (
-    <M33tWrapper id="M33tWrapper">
+    <M33tWrapper id="M33t">
       <Connected
-        isLogged={props.isLogged}
-        handleLogging={props.handleLogging}
-        handleLike={props.handleLike}
-        handleModal={props.handleModal}
-        like={props.like}
-        modal={props.modal}
+        isLogged={isLogged}
+        handleLogging={handleLogging}
+        handleLike={handleLike}
+        handleModal={handleModal}
+        like={like}
+        modal={modal}
+        handleRate={handleRate}
+        rate={rate}
       />
       <Menu url={props.location.pathname} />
     </M33tWrapper>

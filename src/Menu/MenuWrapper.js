@@ -31,12 +31,12 @@ const MenuWrapper = styled.div`
     box-shadow: 0 0 8px 0px ${theme.colors.grey};
     overflow: hidden;
     
-    ${({ menuClass }) => menuClass === "-close" && `
+    ${({ menuclass }) => menuclass === "-close" && `
       transition: width 0.4s;
       width: 60px;
     `}
     
-    ${({ menuClass }) => menuClass === "-open" && `
+    ${({ menuclass }) => menuclass === "-open" && `
       transition: width 0.4s;
       width: 200px;
     `}
@@ -66,12 +66,12 @@ const MenuWrapper = styled.div`
     @media all and (min-width: 768px) {
       display: block;
       
-      ${({ menuClass }) => menuClass === "-close" && `
+      ${({ menuclass }) => menuclass === "-close" && `
         transition: width 0.4s;
         width: 60px;
       `}
       
-      ${({ menuClass }) => menuClass === "-open" && `
+      ${({ menuclass }) => menuclass === "-open" && `
         transition: width 0.4s;
         width: 200px;
       `}
