@@ -4,7 +4,7 @@ const me = {
   photo3: '',
   firstName: 'Marion',
   lastName: 'Skw',
-  activity: 'Web developper',
+  activity: 'Web developer',
   age: 24,
   email: 'marion@mail.fr',
   city: 'Paris',

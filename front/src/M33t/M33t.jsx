@@ -2,7 +2,7 @@ import React from 'react';
 import M33tWrapper from './M33tWrapper';
 import NotConnected from '../NotConnected/NotConnected';
 import Connected from '../Connected/Connected';
-import Menu from '../Menu/Menu';
+import Menu from '../components/Menu/Menu';
 import { withRouter } from 'react-router-dom';
 
 function M33t(props) {
@@ -14,8 +14,9 @@ function M33t(props) {
     handleLike,
     modal,
     handleModal,
-    rate,
-    handleRate,
+    popularityNice,
+    popularitySmart,
+    handlePopularity,
   } = props;
 
   if (!isLogged) {
@@ -35,8 +36,9 @@ function M33t(props) {
         handleModal={handleModal}
         like={like}
         modal={modal}
-        handleRate={handleRate}
-        rate={rate}
+        handlePopularity={handlePopularity}
+        popularityNice={popularityNice}
+        popularitySmart={popularitySmart}
       />
       <Menu url={props.location.pathname} />
     </M33tWrapper>

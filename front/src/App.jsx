@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import M33t from './M33t/M33t';
-import Loading from './Loading/Loading';
+import Loading from './components/Loading/Loading';
 
-import Header from './Header/Header';
+import Header from './components/Header/Header';
 
 
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -39,7 +39,8 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [like, setLike] = useState(0);
   const [modal, setModal] = useState(false);
-  const [rate, setRate] = useState(0);
+  const [popularityNice, setPopularityNice] = useState(0);
+  const [popularitySmart, setPopularitySmart] = useState(0);
 
   function handleLogging() {
     setIsLogged(!isLogged);
@@ -54,8 +55,13 @@ function App() {
     setLike(2);
   }
 
-  function handleRate(rate) {
-    setRate(rate);
+  function handlePopularity(type, rate) {
+    const mapStateToFunc = {
+      [type]: () => {},
+      nice: setPopularityNice,
+      smart: setPopularitySmart,
+    };
+    mapStateToFunc[type](rate);
   }
 
   function handleLike() {
@@ -64,8 +70,7 @@ function App() {
     else if (like === 1)
       return setModal(true);
   }
-
-  console.log('rate', rate)
+  console.log(popularityNice)
   return (
     <Router>
       <ThemeProvider theme={theme[changeTheme]}>
@@ -77,8 +82,9 @@ function App() {
             handleLike={handleLike}
             like={like}
             modal={modal}
-            handleRate={handleRate}
-            rate={rate}
+            handlePopularity={handlePopularity}
+            popularityNice={popularityNice}
+            popularitySmart={popularitySmart}
           />
           <Header />
           {loading &&

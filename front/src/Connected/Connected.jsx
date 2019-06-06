@@ -1,20 +1,10 @@
 import React from 'react';
 import ConnectedWrapper from './ConnectedWrapper';
 import { withRouter, Route } from 'react-router-dom';
-import FavList from '../FavList/FavList';
-import MessageList from '../MessageList/MessageList';
-import Profile from '../Profile/Profile';
-import MyProfile from '../MyProfile/MyProfile';
-import Settings from '../Settings/Settings';
-import ContactList from '../ContactList/ContactList';
-import HomePage from '../HomePage/HomePage';
-import BuySuperLikes from '../BuySuperLikes/BuySuperLikes';
-import MyInformations from '../MyInformations/MyInformations.jsx';
-import About from '../About/About';
+import { About, Rate, BuySuperLikes, FavList, MessageList, Profile, MyProfile, Messages, Settings, HomePage, MyInformations } from '../pages';
 import user from '../User';
 import me from '../Me';
-import Notification from '../Notification/Notification';
-import Rate from '../Rate/Rate';
+import Notification from '../components/Notification/Notification';
 
 const Connected = (props) =>
 <ConnectedWrapper id="Connected" isLogged={props.isLogged}>
@@ -24,7 +14,7 @@ const Connected = (props) =>
       like={props.like}
     />
   } />
-  <Route path="/messages" component={ContactList} />
+  <Route path="/messages" component={Messages} />
   <Route path="/superlikes" component={BuySuperLikes} />
   <Route path="/about" component={About} />
   <Route path="/profile" render={() => 
@@ -38,7 +28,7 @@ const Connected = (props) =>
   } />
   <Route path="/messageid" component={MessageList} />
   <Route path="/rate" render={() =>
-    <Rate handleRate={props.handleRate} rate={props.rate} /> 
+    <Rate handlePopularity={props.handlePopularity} popularityNice={props.popularityNice} popularitySmart={props.popularitySmart} user={user} /> 
   }/>
 
   <Route path="/settings/my-infos" render={() =>

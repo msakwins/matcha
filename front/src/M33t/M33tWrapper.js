@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-// import theme from '../theme';
+// import theme from '../../theme';
 
 const M33tWrapper = styled.div`
   min-height: ${({ isLogged }) => isLogged ? `calc(100vh - 120px)` : `calc(100vh - 60px)`};
