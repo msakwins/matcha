@@ -1,22 +1,44 @@
 import React from 'react';
 import ConnectedWrapper from './ConnectedWrapper';
 import { withRouter, Route } from 'react-router-dom';
-import { About, Rate, BuySuperLikes, FavList, MessageList, Profile, MyProfile, Messages, Settings, HomePage, MyInformations } from '../pages';
+import About from '../About/About';
+import Rate from '../Rate/Rate';
+import BuySuperLikes from '../BuySuperLikes/BuySuperLikes';
+import Matches from '../Matches/Matches';
+import Profile from '../Profile/Profile';
+import MyProfile from '../MyProfile/MyProfile';
+import Messages from '../Messages/Messages';
+import MessageUser from '../MessageUser/MessageUser';
+import Settings from '../Settings/Settings';
+import HomePage from '../HomePage/HomePage';
+import MyInformations from '../MyInformations/MyInformations';
 import user from '../User';
 import me from '../Me';
-import Notification from '../components/Notification/Notification';
+import Header from '../Header/Header';
+import Notification from '../Notification/Notification';
 
 const Connected = (props) =>
 <ConnectedWrapper id="Connected" isLogged={props.isLogged}>
   <Route exact path="/" component={HomePage} />
-  <Route path="/favs" render={() =>
-    <FavList user={user}
-      like={props.like}
+
+  <Route path="/matches" render={() =>
+    <Matches user={user}
+    like={props.like}
     />
   } />
-  <Route path="/messages" component={Messages} />
+
+  <Route path="/messages" render={() =>
+    <Messages
+    user={user}
+    />
+  } />
+
+  <Route path={`/message/${user.name}/${user.id}`} component={MessageUser} />
+
   <Route path="/superlikes" component={BuySuperLikes} />
+
   <Route path="/about" component={About} />
+
   <Route path="/profile" render={() => 
     <Profile
       handleModal={props.handleModal}
@@ -26,7 +48,7 @@ const Connected = (props) =>
       user={user}
     />
   } />
-  <Route path="/messageid" component={MessageList} />
+
   <Route path="/rate" render={() =>
     <Rate handlePopularity={props.handlePopularity} popularityNice={props.popularityNice} popularitySmart={props.popularitySmart} user={user} /> 
   }/>
@@ -34,9 +56,11 @@ const Connected = (props) =>
   <Route path="/settings/my-infos" render={() =>
     <MyInformations user={user} />
   } />
+
   <Route path="/my-profile" render={() =>
     <MyProfile me={me} />
   } />
+
   <Route exact path="/settings" render={() =>
     <Settings
       user={user}
@@ -45,7 +69,9 @@ const Connected = (props) =>
       isLogged={props.isLogged}
     />
   } />
+
   <Notification user={user} notification={true}/>
+  <Header path={props.path} />
 </ConnectedWrapper>
   
 export default withRouter(Connected);

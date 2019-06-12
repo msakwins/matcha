@@ -7,7 +7,8 @@ const styledLink = styled(Link)`
   outline: none;
   font-size: 14px;
   margin: 10px 0;
-  color: ${theme.colors.white};
+  color: ${theme.colors.lightBlue};
+  border: 1px solid ${theme.colors.lightBlue};
 `;
 
 export default styledLink;

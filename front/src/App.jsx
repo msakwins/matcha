@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import M33t from './M33t/M33t';
-import Loading from './components/Loading/Loading';
-
-import Header from './components/Header/Header';
-
+import Loading from './Loading/Loading';
 
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
@@ -70,7 +67,6 @@ function App() {
     else if (like === 1)
       return setModal(true);
   }
-  console.log(popularityNice)
   return (
     <Router>
       <ThemeProvider theme={theme[changeTheme]}>
@@ -86,10 +82,13 @@ function App() {
             popularityNice={popularityNice}
             popularitySmart={popularitySmart}
           />
-          <Header />
-          {loading &&
-            <Loading />
-          }
+          {/*
+
+<Header />
+{loading &&
+  <Loading />
+}
+*/}
         </AppWrapper>
       </ThemeProvider>
     </Router>

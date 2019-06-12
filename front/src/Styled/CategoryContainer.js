@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import theme from '../theme';
+// import theme from '../theme';
 
 const CategoryContainer = styled.div`
   width: 100%;

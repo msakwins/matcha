@@ -83,7 +83,7 @@ const Button = styled.button`
     text-shadow: 2px 0 ${theme.colors.black}
   `};
 
-  ${({ blueBorder }) => blueBorder && `
+  ${({ blueBorder }) => blueBorder === "blueBorder" && `
     border-color: ${theme.colors.lightBlue};
     color: ${theme.colors.lightBlue};
     background-color: ${theme.colors.white};
@@ -94,6 +94,10 @@ const Button = styled.button`
     background-color: ${theme.colors.white};
     border-color: ${theme.colors.violet};
   `};
+
+  ${props => props.redBorder && `
+    border: 1px solid red;
+  `}
 
   ${({ img }) => img && `
     background-image: url(${img});

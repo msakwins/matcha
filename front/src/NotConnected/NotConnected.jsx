@@ -1,8 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import SignIn from '../pages/SignIn/SignIn';
-import SignUp from '../pages/SignUp/SignUp';
-import Recover from '../pages/Recover/Recover';
+import SignIn from '../SignIn/SignIn';
+import SignUp from '../SignUp/SignUp';
+import Recover from '../Recover/Recover';
 
 const NotConnected = (props) => {
   if (props.location.pathname === '/register') {

@@ -2,7 +2,7 @@ import React from 'react';
 import M33tWrapper from './M33tWrapper';
 import NotConnected from '../NotConnected/NotConnected';
 import Connected from '../Connected/Connected';
-import Menu from '../components/Menu/Menu';
+import Menu from '../Menu/Menu';
 import { withRouter } from 'react-router-dom';
 
 function M33t(props) {
@@ -39,6 +39,7 @@ function M33t(props) {
         handlePopularity={handlePopularity}
         popularityNice={popularityNice}
         popularitySmart={popularitySmart}
+        path={props.location.pathname}
       />
       <Menu url={props.location.pathname} />
     </M33tWrapper>

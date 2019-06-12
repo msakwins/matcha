@@ -1,4 +1,5 @@
 const user = {
+  id: 0,
   photo1: 'user.png',
   photo2: '',
   photo3: '',
