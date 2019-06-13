@@ -23,7 +23,7 @@ const SignUp = () => {
   }
 
   return (
-    <SignUpWrapper id="SignUp"page={page} lastPage={lastPage}>
+  <SignUpWrapper id="SignUp"page={page} lastPage={lastPage}>
     <SignUpSteps page={page} />
     <SignUpButtons page={page} handlePreviousPage={handlePreviousPage} handleNextPage={handleNextPage} />
   </SignUpWrapper>

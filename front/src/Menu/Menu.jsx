@@ -47,9 +47,6 @@ const Menu = (props) => {
     <LinkMessages onClick={handleCloseMenu} menuclass={menuclass} selected={pathname === "/messages"} to ="/messages">
       <span>Messages</span>
     </LinkMessages>
-    <LinkProfile onClick={handleCloseMenu} menuclass={menuclass} selected={pathname === "/my-profile"} to ="/my-profile">
-      <span>My profile</span>
-    </LinkProfile>
     <div onClick={handleMenu} className="menu__close-button">...</div>
     </MenuWrapper>
   )

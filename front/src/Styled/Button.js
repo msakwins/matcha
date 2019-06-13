@@ -10,6 +10,7 @@ const Button = styled.button`
   cursor: pointer;
   font-family: ${theme.font.primary};
   height: 40px;
+  min-height: 40px;
   width: 180px;
   outline: none;
   padding: 0 10px;

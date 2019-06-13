@@ -13,19 +13,16 @@ const SettingsWrapper = styled.div`
   }
   
   .settings__pink {
-    border: 3px double ${theme.colors.darkPink};
     margin: 10px auto;
     width: 200px;
   }
 
   .settings__blue {
-    border: 3px double ${theme.colors.lightBlue};
     margin: 10px auto;
     width: 200px;
   }
 
   .settings__grey {
-    border: 3px double ${theme.colors.darkGrey};
     margin: 10px auto;
     width: 200px;
   }

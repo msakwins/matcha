@@ -10,6 +10,7 @@ const SignUpWrapper = styled.div`
   width: 100%;
   position: relative;
   white-space: nowrap;
+  margin: 0 0 70px 0;
 
   .sign-up__filled {
     width: 180px;

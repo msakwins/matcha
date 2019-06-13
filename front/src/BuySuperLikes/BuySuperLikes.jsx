@@ -9,7 +9,7 @@ const BuySuperLikes = () =>
     </CategoryHeader>
     <CategoryContainer>
     <p>
-      Better than regular likes, super-likes allow you to send a message directly to the Super-likedg.
+      Better than regular likes, super-likes allow you to send a message directly to the Super-liked.
       If you super-liked each other, you will unlock special interactions.
     </p>
     <p>

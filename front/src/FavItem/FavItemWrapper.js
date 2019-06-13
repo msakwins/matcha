@@ -4,10 +4,11 @@ import theme from '../theme';
 const FavItemWrapper = styled.div`
   border: 1px solid ${theme.colors.lightestBlue};
   box-shadow: 2px 2px 8px 2px ${theme.colors.grey};
-  height: 250px;
+  height: 100px;
   display: flex;
-  flex-direction: column;
-  max-width: 50%;
+  flex-direction: row;
+  width: 100%;
+  max-width: 300px;
   padding: 10px;
 
   :nth-child(odd) {
@@ -16,14 +17,12 @@ const FavItemWrapper = styled.div`
 
   .fav-item {
     display: flex;
-    flex-direction: row;
-    padding: 10px;
+    flex-direction: column;
 
     &__info {
       display: flex;
       flex-direction: column;
       font-size: 14px;
-      margin: 10px 0 0;
       text-align: left;
     }
 
@@ -37,8 +36,10 @@ const FavItemWrapper = styled.div`
   }
   
   .fav-item__photo {
-    height: auto;
-    width: 100%;
+    height: 80px;
+    max-height: 80px;
+    width: auto;
+    max-width: 80px;
     margin: 0;
   }
 

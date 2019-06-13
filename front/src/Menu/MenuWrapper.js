@@ -9,7 +9,7 @@ const MenuWrapper = styled.div`
   flex-direction: row;
   width: 100%;
   background: ${theme.colors.white};
-  border-top: 1px solid ${theme.colors.lightBlue};
+  border-top: 1px solid ${theme.colors.mediumGrey};
   justify-content: center;
   align-items: center;
   max-width: 1024px;

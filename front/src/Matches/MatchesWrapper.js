@@ -7,7 +7,7 @@ const MatchesWrapper = styled.div`
   height: 100%;
   margin: 0 auto;
   display: flex;
-  flex-direction: flex-wrap;
+  flex-direction: column;
 
   img {
     margin: 30px 10px 0;

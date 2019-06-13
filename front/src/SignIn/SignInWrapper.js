@@ -17,7 +17,7 @@ const SignInWrapper = styled.div`
   .sign-in__forgot-password {
     font-family: ${theme.font.primary};
     font-size: 14px;
-    margin: 0 0 60px;
+    margin: 0 0 40px;
     text-decoration: underline;
     color: ${theme.colors.lightBlue};
   }

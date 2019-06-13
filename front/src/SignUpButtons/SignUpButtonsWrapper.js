@@ -10,6 +10,7 @@ const SignUpButtonsWrapper = styled.div`
   flex-direction: row;
   padding: 10px;
   border-top: 1px solid ${theme.colors.grey};
+  background: ${theme.colors.white};
 
   .sign-up-buttons__next {
     width: 100%;

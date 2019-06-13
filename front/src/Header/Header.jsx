@@ -1,10 +1,31 @@
 import React from 'react';
 import HeaderWrapper from'./HeaderWrapper';
 import { Title } from '../Styled';
+import Logo from '../Logo/Logo';
+
+function HeaderPath(path) {
+  if (path === "/")
+    return("Welcome");
+  else if (path === "/messages")
+    return("Messages");
+  else if (path === "/matches")
+    return("Matches");
+  else if (path === "/settings")
+    return("Settings");
+  else if (path === "/my-profile")
+    return("My profile");
+  else if (path === "/my-profile")
+    return("My profile");
+  else if (path === "/my-profile")
+    return("My profile");
+  else
+    return(<Logo />);
+
+}
 
 const Header = (props) =>
   <HeaderWrapper id="HeaderWrapper">
-    <Title>{props.path.slice(1)}</Title>
+    <Title>{HeaderPath(props.path)}</Title>
     <img src="me.jpg" alt="My profile"></img>
   </HeaderWrapper>
 

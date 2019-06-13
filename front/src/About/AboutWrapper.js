@@ -6,10 +6,6 @@ color: ${theme.colors.black};
 background-color: ${theme.colors.white};
 padding: 10px;
 
-  h1 {
-    color: ${theme.colors.darkPink};
-  }
-
   span {
     color: ${theme.colors.white};
     font-size: 22px;
@@ -22,7 +18,6 @@ padding: 10px;
   p {
     max-width: 240px;
     text-align: left;
-    border: 5px double ${theme.colors.pink};
     padding: 10px;
     margin: 20px auto;
     font-size: 14px;

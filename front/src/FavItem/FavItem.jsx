@@ -5,7 +5,7 @@ import Like from '../Styled/Like';
 import { LinkMessages } from '../Styled';
 
 const FavItem = ({ like }) =>
-<FavItemWrapper small="small" like={like}>
+<FavItemWrapper id="FavItem" small="small" like={like}>
   <img src="/user.png" alt="user" className="fav-item__photo" />
   <div className="fav-item">
     <div className="fav-item__info">
