@@ -1,6 +1,5 @@
 import React from 'react';
 import AboutWrapper from './AboutWrapper';
-import { Title } from '../Styled';
 
 const About = () =>
   <AboutWrapper>

@@ -6,16 +6,16 @@ const SignUpButtons = ({ page, handlePreviousPage, handleNextPage }) => {
   if (page === 0)
     return (
       <SignUpButtonsWrapper id="SignUpButtons">
-        <Button blueBorder="blueBorder" onClick={handleNextPage} className="sign-up-buttons__next">Next</Button>
+        <Button color="lightBlue" onClick={handleNextPage} className="sign-up-buttons__next">Next</Button>
       </SignUpButtonsWrapper>
     )
 
   else if (page === 1)
     return (
       <SignUpButtonsWrapper id="SignUpButtons">
-        <Button blueBorder="blueBorder" img="/left-arrow.svg" small className="sign-up-buttons__prev" onClick={handlePreviousPage} />
-        <Button blueBorder="blueBorder" onClick={handleNextPage} className="sign-up-buttons__next">Next</Button>
-        <Button blueBorder="blueBorder" small img="/right-arrow.svg" className="sign-up-buttons__skip" />
+        <Button color="mediumGrey" img="/left-arrow.svg" small className="sign-up-buttons__prev" onClick={handlePreviousPage} />
+        <Button color="lightBlue" onClick={handleNextPage} className="sign-up-buttons__next">Next</Button>
+        <Button color="mediumGrey" small img="/right-arrow.svg" className="sign-up-buttons__skip" />
       </SignUpButtonsWrapper>
 
   )
@@ -23,8 +23,8 @@ const SignUpButtons = ({ page, handlePreviousPage, handleNextPage }) => {
   else if (page === 2)
     return (
       <SignUpButtonsWrapper id="SignUpButtons">
-        <Button blueBorder="blueBorder" img="/left-arrow.svg" small className="sign-up-buttons__prev" onClick={handlePreviousPage} />
-        <Button blueBorder="blueBorder" className="sign-up-buttons__next">Create</Button>
+        <Button color="mediumGrey" img="/left-arrow.svg" small className="sign-up-buttons__prev" onClick={handlePreviousPage} />
+        <Button color="darkPink" className="sign-up-buttons__next">Create</Button>
       </SignUpButtonsWrapper>
   )
 }

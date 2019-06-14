@@ -8,6 +8,8 @@ const theme = {
     lighterBlue: 'rgba(168, 208, 230, 0.6)',
     lightestBlue: 'rgba(168, 208, 230, 0.3)',
 
+    red: '#ff4f51',
+    lightRed: '#ff9999',
     violet: '#B39BC8',
     darkViolet: '#460084',
     pink: '#FFD3EA',

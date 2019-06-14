@@ -22,6 +22,7 @@ const Button = styled.button`
   border-style: solid;
   border-width: 1px;
   letter-spacing: 0.05rem;
+  background-color: ${theme.colors.white};
   
   img {
     height: 20px;
@@ -35,6 +36,15 @@ const Button = styled.button`
     font-size: 18px;
   }
 
+  ${({ simple }) => simple && `
+    border: none;
+    text-transform: initial;
+    font-weight: 400;
+    letter-spacing: initial;
+    color: ${theme.colors.lightBlue};
+    text-decoration: underline;
+  `};
+
   ${({ small }) => small && `
     width: 40px;
     min-width: 40px;
@@ -46,9 +56,9 @@ const Button = styled.button`
     border-color: ${theme.colors.darkGrey};
   `};
 
-  ${({ greyBorder }) => greyBorder && `
-    border: 1px solid ${theme.colors.darkGrey};
-    color: ${theme.colors.darkGrey};
+  ${({ color }) => color && `
+    border-color: ${theme.colors[color]};
+    color: ${theme.colors[color]};
     background-color: ${theme.colors.white};
   `};
 
@@ -56,25 +66,14 @@ const Button = styled.button`
     background-color: ${theme.colors.pink};
     border-color: ${theme.colors.pink};
     letter-spacing: 0.05rem;
-    text-shadow: 2px 0 ${theme.colors.darkPink};
+    text-shadow: 2px 0 ${theme.colors.darkpink};
   `};
 
-  ${({ pinkBorder }) => pinkBorder && `
-    border: 1px solid ${theme.colors.pink};
-    color: ${theme.colors.pink};
-    background-color: ${theme.colors.white};
-  `};
 
-  ${({ darkPink }) => darkPink && `
+  ${({ darkpink }) => darkpink && `
     background-color: ${theme.colors.darkPink};
     border-color: ${theme.colors.darkPink};
     color: ${theme.colors.pink};
-  `};
-
-  ${({ darkPinkBorder }) => darkPinkBorder && `
-    background-color: ${theme.colors.white};
-    border-color: ${theme.colors.darkPink};
-    color: ${theme.colors.darkPink};
   `};
 
   ${({ blue }) => blue && `
@@ -84,28 +83,13 @@ const Button = styled.button`
     text-shadow: 2px 0 ${theme.colors.black}
   `};
 
-  ${({ blueBorder }) => blueBorder === "blueBorder" && `
-    border-color: ${theme.colors.lightBlue};
-    color: ${theme.colors.lightBlue};
-    background-color: ${theme.colors.white};
-  `};
-
-  ${({ violetBorder }) => violetBorder && `
-    color: ${theme.colors.violet};
-    background-color: ${theme.colors.white};
-    border-color: ${theme.colors.violet};
-  `};
-
-  ${props => props.redBorder && `
-    border: 1px solid red;
-  `}
-
   ${({ img }) => img && `
     background-image: url(${img});
     background-size: 20px;
     background-position: 10px center;
     background-repeat: no-repeat;
   `};
+
 `;
 
 export { Button };

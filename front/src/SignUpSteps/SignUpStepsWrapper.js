@@ -3,11 +3,23 @@ import theme from '../theme';
 
 const SignUpStepsWrapper = styled.div`
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 60px);
   position: relative;
   white-space: nowrap;
   display: flex;
   flex-direction: row;
+
+  .sign-up__required {
+    color: ${theme.colors.mediumGrey};
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    margin: 0 0 10px;
+
+    span {
+      font-size: 20px;
+    }
+  }
 
   .sign-up__first-step {
     height: 100%;
@@ -78,6 +90,13 @@ const SignUpStepsWrapper = styled.div`
 
       button {
         margin: 0;
+      }
+    }
+    
+    .sign-up__genders {
+      img {
+        height: 30px;
+        width: 30px;
       }
     }
   }
