@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const TagItemWrapper = styled.div`
   display: flex;
   font-size: 12px;
-  background: ${theme.colors.violet};
+  background: ${theme.colors.black};
   color: ${theme.colors.white};
   padding: 2px 4px;
   border-radius: 4px;

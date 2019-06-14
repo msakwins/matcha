@@ -4,10 +4,6 @@ import { CategoryHeader, CategoryContainer } from '../Styled';
 
 const BuySuperLikes = () =>
   <BuySuperLikesWrapper id="BuySuperLikes">
-    <CategoryHeader>
-      SUPERLIKES
-    </CategoryHeader>
-    <CategoryContainer>
     <p>
       Better than regular likes, super-likes allow you to send a message directly to the Super-liked.
       If you super-liked each other, you will unlock special interactions.
@@ -19,7 +15,6 @@ const BuySuperLikes = () =>
     <span className="buy-super-likes__little">
       The Super-like can be taken back at any time after the 42 hours, just check your profile.
     </span>
-    </CategoryContainer>
   </BuySuperLikesWrapper>
 
 export default BuySuperLikes;

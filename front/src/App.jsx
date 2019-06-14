@@ -35,6 +35,7 @@ function App() {
   const [changeTheme, setChangeTheme] = useState(1);
   const [loading, setLoading] = useState(false);
   const [like, setLike] = useState(0);
+
   const [modal, setModal] = useState(false);
   const [popularityNice, setPopularityNice] = useState(0);
   const [popularitySmart, setPopularitySmart] = useState(0);
@@ -62,10 +63,12 @@ function App() {
   }
 
   function handleLike() {
-    if (like === 0)
-      return setLike(1);
-    else if (like === 1)
+    if (like === 0) {
+      setLike(1);
+    }
+    else if (like === 1) {
       return setModal(true);
+    }
   }
   return (
     <Router>

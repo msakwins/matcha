@@ -11,10 +11,11 @@ const LikeWrapper = styled.div`
   position: relative;
   margin: 0 0 10px;
 
-  .profile__fav {
+  .profile__like {
     height: 60px;
     width: 60px;
     background: none;
+    position: absolute;
     border: none;
     cursor: pointer;
     background-size: 30px;
@@ -22,6 +23,7 @@ const LikeWrapper = styled.div`
     background-position: center;
     padding: 0;
     border-radius: 100%;
+    animation-iteration-count: 1;
 
     ${({ like }) => like === 0 && `background-image: url('/heart.svg');`}
     ${({ like }) => like === 1 && `

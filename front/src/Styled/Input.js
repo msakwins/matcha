@@ -26,6 +26,11 @@ const Input = styled.input`
     color: ${theme.colors.mediumGrey};
     font-size: 16px;
   }
+
+  ${({ error }) => error && `
+    border-color: ${theme.colors.darkPink};
+    color: ${theme.colors.darkPink};
+  `};
 `;
 
 export default Input;

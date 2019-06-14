@@ -36,6 +36,17 @@ const SignInWrapper = styled.div`
     font-family: ${theme.font.primary};
     margin: 10px 0 0;
   }
+
+  .error {
+    display: none;
+    font-size: 10px;
+    color: ${theme.colors.darkPink};
+
+    ${({ error }) => error && `
+      display: block;
+    `}
+  }
+
 `;
 
 export default SignInWrapper;

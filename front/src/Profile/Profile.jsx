@@ -27,7 +27,7 @@ function Profile(props) {
       />
 
       <span className="profile__user-name">Nioki</span>
-      <Like handleLike={props.handleLike} like={props.like} />
+      <Like handleLike={props.handleLike} like={props.like} likeAnim={props.likeAnim} />
       { props.modal &&
         <div className="profile__love-modal">
           This will use a SUPER-LIKE 

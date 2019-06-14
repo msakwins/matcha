@@ -4,9 +4,7 @@ import { Title } from '../Styled';
 import Logo from '../Logo/Logo';
 
 function HeaderPath(path) {
-  if (path === "/")
-    return("Welcome");
-  else if (path === "/messages")
+  if (path === "/messages")
     return("Messages");
   else if (path === "/matches")
     return("Matches");
@@ -14,10 +12,8 @@ function HeaderPath(path) {
     return("Settings");
   else if (path === "/my-profile")
     return("My profile");
-  else if (path === "/my-profile")
-    return("My profile");
-  else if (path === "/my-profile")
-    return("My profile");
+  else if (path === "/settings/my-infos")
+    return("My informations");
   else
     return(<Logo />);
 
