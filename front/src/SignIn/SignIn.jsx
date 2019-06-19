@@ -23,7 +23,7 @@ function SignIn({ handleLogging, isLogged }) {
       <Button color="mediumGrey" onClick={handleLogging}>Login</Button>
       <div className="signin__signup">
         <span>You don't have an account yet? </span>
-        <Button color="darkGrey" as={Link} to="/register">Register</Button>
+        <Button color="darkGrey" as={Link} to="/register/step1">Register</Button>
       </div>
     </SignInWrapper>
   );

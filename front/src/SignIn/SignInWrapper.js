@@ -12,6 +12,10 @@ const SignInWrapper = styled.div`
 
   h1 {
     margin: 20px 0;
+
+    @media all and (min-width: 768px) {
+      margin: 60px 0 20px;
+    }
   }
 
   .signin__signup {

@@ -18,14 +18,10 @@ const SignUpButtonsWrapper = styled.div`
   }
 
   .sign-up-buttons__prev {
-    width: 40px;
-    height: 40px;
     margin: 0;
   }
 
   .sign-up-buttons__skip {
-    height: 40px;
-    width: 40px;
     margin: 0;
   }
 `;

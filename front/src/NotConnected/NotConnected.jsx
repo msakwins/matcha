@@ -5,15 +5,15 @@ import SignUp from '../SignUp/SignUp';
 import Recover from '../Recover/Recover';
 
 const NotConnected = (props) => {
-  if (props.location.pathname === '/register') {
-    return <SignUp />
-  }
   
-  else if (props.location.pathname === '/recover') {
+  if (props.location.pathname === '/recover') {
     return <Recover />
   }
-  
-  else return <SignIn handleLogging={props.handleLogging} isLogged={props.isLogged} />
+  if (props.location.pathname === '/') {
+    return <SignIn handleLogging={props.handleLogging} isLogged={props.isLogged} />
+  }
+  else
+    return <SignUp />
 }
   
 export default withRouter(NotConnected);

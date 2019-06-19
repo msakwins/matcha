@@ -1,33 +1,58 @@
 import React, { useState } from 'react';
+import { withRouter, Route, Switch } from 'react-router-dom';
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+
 import SignUpWrapper from'./SignUpWrapper';
 import SignUpButtons from '../SignUpButtons/SignUpButtons';
-import SignUpSteps from '../SignUpSteps/SignUpSteps';
+import SignUpStep1 from '../SignUpSteps/SignUpStep1';
+import SignUpStep2 from '../SignUpSteps/SignUpStep2';
+import SignUpStep3 from '../SignUpSteps/SignUpStep3';
 
-const SignUp = () => {
-  const [page, setPage] = useState(0);
-  const [lastPage, setLastPage] = useState(0);
+const SignUp = (props) => {
+  const [skip, setSkip] = useState(0);
+  const [skipMessage, setSkipMessage] = useState(false);
+  const [prevPage, setPrevPage] = useState(0);
 
-  function handleNextPage() {
-    setPage(page + 1);
-    setLastPage(page);
+  function handleSkip() {
+    if (skip === 0) {
+      setSkip(1);
+      setSkipMessage(true);
+    }
+    else
+      setSkip(2);
   }
 
-  function handlePreviousPage() {
-    if (page === 0) {
-      setPage(page);
-    }
-    else {
-      setLastPage(page);
-      setPage(page - 1);
-    }
+  function handlePage(page) {
+    setPrevPage(page)
   }
+
 
   return (
-  <SignUpWrapper id="SignUp"page={page} lastPage={lastPage}>
-    <SignUpSteps page={page} />
-    <SignUpButtons page={page} handlePreviousPage={handlePreviousPage} handleNextPage={handleNextPage} />
+  <SignUpWrapper id="SignUp" prevPage={prevPage}>
+    {console.log(prevPage)}
+    <TransitionGroup component={null}>
+      <CSSTransition
+        timeout={300}
+        classNames="page"
+        key={props.location.key}
+      >
+        <Switch location={props.location}>
+          <Route path="/register/step1" component={SignUpStep1}/>
+          <Route path="/register/step2" component={SignUpStep2}/>
+          <Route path="/register/step3" render={() =>
+            <SignUpStep3 />
+          } />
+        </Switch>
+      </CSSTransition>
+    </TransitionGroup>
+    <SignUpButtons
+      skip={skip}
+      handleSkip={handleSkip}
+      path={props.location.pathname}
+      handlePage={handlePage}
+    />
   </SignUpWrapper>
   )
 }
 
-export default SignUp;
+export default withRouter(SignUp);

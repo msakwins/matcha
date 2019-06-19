@@ -48,6 +48,8 @@ const Button = styled.button`
   ${({ small }) => small && `
     width: 40px;
     min-width: 40px;
+    min-height: 40px;
+    height: 40px;
     font-size: 14px;
   `};
 
