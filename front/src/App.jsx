@@ -5,6 +5,7 @@ import Loading from './Loading/Loading';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import AppWrapper from './AppWrapper';
+import { withMutation } from 'react-apollo';
 
 const theme = {
   1: {
@@ -50,7 +51,8 @@ function App() {
 
   function handleModal() {
     setModal(false);
-    setLike(2);
+    setLike(3);
+    setTimeout(handleStateLike(4), 6000)
   }
 
   function handlePopularity(type, rate) {
@@ -62,11 +64,24 @@ function App() {
     mapStateToFunc[type](rate);
   }
 
+  function handleStateLike() {
+    console.log("like:", like)
+    if (like === 1) {
+      setLike(2);
+      console.log("like2:", like)
+    }
+
+    if (like === 3) {
+      setLike(4)
+    }
+  }
+
   function handleLike() {
     if (like === 0) {
       setLike(1);
+      setTimeout(() => handleStateLike(), 10000);
     }
-    else if (like === 1) {
+    else if (like === 2) {
       return setModal(true);
     }
   }
@@ -74,6 +89,7 @@ function App() {
     <Router>
       <ThemeProvider theme={theme[changeTheme]}>
         <AppWrapper id="AppWrapper">
+          {console.log(like)}
           <M33t
             handleLogging={handleLogging}
             isLogged={isLogged}

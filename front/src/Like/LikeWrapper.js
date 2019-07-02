@@ -25,13 +25,15 @@ const LikeWrapper = styled.div`
     border-radius: 100%;
     animation-iteration-count: 1;
 
-    ${({ like }) => like === 0 && `background-image: url('/heart.svg');`}
+    ${({ like }) => like === 0 && `background-image: url('/heart.svg');`};
     ${({ like }) => like === 1 && `
       animation: like 1s cubic-bezier(.17, .89, .32, 1.49) forwards;
-    `}
-    ${({ like }) => like === 2 && `
+    `};
+    ${({ like }) => like === 2 && `background-image: url('/heart-like.svg');`};
+    ${({ like }) => like === 3 && `
       animation: superlike 1s cubic-bezier(.17, .89, .32, 1.49) forwards;
-    `}
+    `};
+    ${({ like }) => like === 4 && `background-image: url('/heart-love.svg');`};
   }
 
   .particle {

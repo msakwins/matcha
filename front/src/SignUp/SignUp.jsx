@@ -29,13 +29,12 @@ const SignUp = (props) => {
 
   return (
   <SignUpWrapper id="SignUp" prevPage={prevPage}>
-    {console.log(prevPage)}
     <TransitionGroup component={null}>
       <CSSTransition
         timeout={300}
         classNames="page"
         key={props.location.key}
-      >
+        >
         <Switch location={props.location}>
           <Route path="/register/step1" component={SignUpStep1}/>
           <Route path="/register/step2" component={SignUpStep2}/>

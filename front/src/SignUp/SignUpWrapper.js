@@ -9,6 +9,7 @@ const SignUpWrapper = styled.div`
   height: auto;
   width: 100%;
   position: relative;
+  overflow: hidden;
   white-space: nowrap;
   margin: 0 0 60px 0;
 
@@ -24,7 +25,6 @@ const SignUpWrapper = styled.div`
     align-items: center;
     padding: 10px;
     width: 100%;
-    height: 100%;
   }
 
   .page-exit {
@@ -40,7 +40,7 @@ const SignUpWrapper = styled.div`
     ${({ prevPage }) => prevPage === 1 && `
       animation: slideInLeft 0.2s forwards;
     `};
-    
+
     ${({ prevPage }) => prevPage === 3 && `
       animation: slideInRight 0.2s forwards;
     `};

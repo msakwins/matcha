@@ -6,14 +6,17 @@ import Recover from '../Recover/Recover';
 
 const NotConnected = (props) => {
   
-  if (props.location.pathname === '/recover') {
+  const path = props.location.pathname;
+
+  if (path === '/recover') {
     return <Recover />
   }
-  if (props.location.pathname === '/') {
-    return <SignIn handleLogging={props.handleLogging} isLogged={props.isLogged} />
-  }
-  else
+
+  if (path === '/register/step1' || path === '/register/step2' || path === '/register/step3')
     return <SignUp />
+
+  else
+    return <SignIn handleLogging={props.handleLogging} isLogged={props.isLogged} />
 }
   
 export default withRouter(NotConnected);
